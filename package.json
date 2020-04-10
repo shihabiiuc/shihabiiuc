@@ -1,0 +1,23 @@
+{
+  "name": "shihabiiuc",
+  "version": "1.0.0",
+  "description": "Node JS learning app and engaging with 100 days of code community",
+  "main": "app.js",
+  "scripts": {
+    "watch": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "web",
+    "development"
+  ],
+  "author": "Shihab Ul Haque",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
+}
