@@ -1,10 +1,6 @@
 const User = require('../models/User')
 
 
-exports.about = function(req, res) {
-    res.render('about')
-}
-
 exports.register = function(req, res) {
     let user = new User(req.body)
     user.register().then(() => {
@@ -50,4 +46,8 @@ exports.home = function(req, res) {
     }else {
         res.render('home-guest', {errors: req.flash('errors'), regErrors: req.flash('regErrors')})
     }
+}
+
+exports.about = function(req, res) {
+    res.render('about')
 }

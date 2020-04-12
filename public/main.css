@@ -373,3 +373,31 @@ textarea.tall-textarea {
   outline: none;
   font-size: .75rem;
 }
+
+/* About */
+.close-icon{
+  max-width: 50px;
+  cursor: pointer;
+}
+.js-initial-position{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.js-visible{
+  visibility: visible;
+  display: block;
+}
+.js-overflow-y-0{
+  overflow-y: hidden;
+}
+#popup-contact-shihab{
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 10;
+  display: block;
+  overflow: hidden;
+  background-color: #CCE5FF;
+  transition: all 1s ease-out;
+}
