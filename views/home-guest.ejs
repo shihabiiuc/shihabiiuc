@@ -18,19 +18,13 @@
   <header class="header-bar">
     <div class="container d-flex flex-column flex-md-row align-items-center p-3">
       <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="text-white">#100DaysOfCode</a></h4>
-      <ul class="nav">
+      <ul class="nav mr-md-auto">
         <li class="nav-item">
           <a class="nav-link text-muted" href="/about">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="#">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="#">Contact</a>
-        </li>
       </ul>
       
-      <form action="#" method="POST" class="mb-0 pt-2 pt-md-0">
+      <form action="/login" method="POST" class="mb-0 pt-2 pt-md-0">
         <div class="row align-items-center">
           <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
             <input name="username" class="form-control form-control-sm input-dark" type="text" placeholder="Username" autocomplete="off">
@@ -49,6 +43,10 @@
 
 <div class="container py-md-5">
 
+  <% errors.forEach(function(message) { %>
+    <div class="alert alert-danger text-center"><%= message %></div>
+  <% }) %>
+
   <div class="row align-items-center">
     <div class="col-lg-7 py-3 py-md-5">
       <h1 class="display-3 font-weight-bold">Built for developers</h1>      
@@ -56,6 +54,10 @@
     </div>
     <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
       <form action="/register" method="POST" id="registration-form">
+
+        <% regErrors.forEach(function(message) { %>
+          <div class="alert alert-danger text-center"><%= message %></div>
+        <% }) %>
 
           <div class="form-group">
             <label for="username-register" class="text-muted mb-1"><small>Username</small></label>
