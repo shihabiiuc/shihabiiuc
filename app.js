@@ -3,7 +3,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const flash = require('connect-flash')
 const app = express()
-const router = require('./router')
+
 
 let sessionOptions = session({
     secret: 'Shihab made this app',
@@ -20,6 +20,14 @@ app.use(express.json())
 app.use(express.static('public'))
 app.set('views', 'views')
 app.set('view engine', 'ejs')
+
+//locals An object that contains response local variables scoped to the request
+app.use(function(req, res, next) {
+  res.locals.user = req.session.user
+  next()
+})
+
+const router = require('./router')
 
 app.use('/', router)
 

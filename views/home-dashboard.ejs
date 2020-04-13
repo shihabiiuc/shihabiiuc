@@ -1,46 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="100 days of code challenges, this is a node js application for testing and learning node.js, express js, javascript &amp; mongodb.">
-  <meta name="keywords" content="100daysofcode, node, js, nodejs, express, mongodb, javascript, web developer, web designer, freelancer, wordpress, ecommerce">
-  <meta name="author" content="Shihab Ul Haque">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>100 Days of Code</title>
-  <link rel="shortcut icon" type="image/png" href="/favicon.png">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
-  <link rel="stylesheet" href="/main.css">
-</head>
-<body>
-  <header class="header-bar">
-    <div class="container d-flex flex-column flex-md-row align-items-center p-3">
-      <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="text-white">#100DaysOfCode</a></h4>
-      <ul class="nav mr-md-auto">
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="/about">About</a>
-        </li>
-      </ul>
-      <div class="flex-row my-3 my-md-0">
-        <!--
-        <a href="#" class="text-white mr-2 header-search-icon" title="Search" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-search"></i></a>
-        <span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment"></i></span>
-        -->
-        <a href="/" class="mr-2"><img title="My Profile" data-toggle="tooltip" data-placement="bottom" style="width: 32px; height: 32px; border-radius: 16px;" src="<%= avatar %>"></a>
-        <!-- <a class="btn btn-sm btn-success mr-2" href="#">Create Post</a> -->
-        <form action="/logout" method="POST" class="d-inline">
-          <button class="btn btn-sm btn-secondary">Logout</button>
-        </form>
-      </div>     
-    </div>
-  </header>
-  <!-- header ends here -->
+<%- include('includes/header') %>
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Hello <strong><%= username.charAt(0).toUpperCase() + username.slice(1) %></strong></h1>
+      <h1 class="display-4">Hello <strong><%= user.username.charAt(0).toUpperCase() + user.username.slice(1) %></strong></h1>
       <p class="lead">Currently, we're working on the site and full features are not available right now. But things are really taking into shape very fast.</p>
     </div>
   </div>
@@ -48,14 +10,4 @@
   <img src="../dog-photo-min.jpg" class="img-fluid border rounded mx-auto d-block" alt="Responsive image, dog photo">
   <figcaption class="figure-caption text-center mb-5">This photo taken from <a href="https://unsplash.com/" target="_blank">Unsplash</a></figcaption>
   
-  <!-- footer begins -->
-  <footer class="border-top text-center small text-muted py-3">
-    <p class="m-0">Copyright &copy; 2019 <a href="/" class="text-muted">OurApp</a>. All rights reserved.</p>
-  </footer>
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script>$('[data-toggle="tooltip"]').tooltip()</script>
-</body>
-</html>
+  <%- include('includes/footer') %>
