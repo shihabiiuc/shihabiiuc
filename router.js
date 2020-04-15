@@ -10,5 +10,7 @@ router.post('/login', userController.login)
 router.post('/logout', userController.logout)
 
 router.get('/create-ticket', userController.mustBeLoggedIn, postController.viewCreateScreen)
+router.post('/create-ticket', userController.mustBeLoggedIn, postController.create)
+router.get('/post/:id', postController.viewSingle)
 
 module.exports = router
