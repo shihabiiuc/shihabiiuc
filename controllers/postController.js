@@ -7,19 +7,72 @@ exports.viewCreateScreen = function(req, res) {
 exports.create = function (req, res) {
     let post = new Post(req.body, req.session.user._id)
     //this body is middleware
-    post.create().then(function() {
-        res.send("new post created")
+    post.create().then(function(newId) {
+        req.flash("success", "New ticket successfully created!")
+        req.session.save(function () {
+            res.redirect(`/post/${newId}`)
+        })
 
     }).catch(function (errors) {
-        res.send(res.errors)
+        errors.forEach( error => req.flash("errors", error))
+        req.session.save(() => res.redirect('/create-post'))
     })
 }
 
 exports.viewSingle = async function (req, res) {
     try {
-        let post = await Post.findSingleById(req.params.id)
+        let post = await Post.findSingleById(req.params.id, req.visitorId)
         res.render('single-post-screen', {post: post})
     } catch {
         res.render('404')
     }
+}
+
+exports.viewEditScreen = async function(req, res) {
+    try {
+        let post = await Post.findSingleById(req.params.id, req.visitorId)
+        if (post.isVisitorOwner) {
+            res.render("edit-post", {post: post})
+        } else {
+            req.flash("errors", "You do not have permission to perform that action.")
+            req.session.save(() => res.redirect("/"))
+        }
+    } catch {
+        res.render("404")
+    }
+}
+
+
+exports.edit = function (req, res) {
+    let post = new Post(req.body, req.visitorId, req.params.id)
+    post.update().then( (status) => {
+        if (status == "success") {
+            req.flash("success", "Ticket updated successfully")
+            req.session.save(function () {
+                res.redirect(`/post/${req.params.id}/edit`)
+            })
+        } else {
+            post.errors.forEach(function (error) {
+                req.flash("errors", error)
+            })
+            req.session.save(function () {
+                res.redirect(`/post/${req.params.id}/edit`)
+            })
+        }
+    }).catch( () => {
+        req.flash("errors", "You do not have enough permission to perform the action.")
+        req.session.save(function () {
+            res.redirect('/')
+        })
+    })
+}
+
+exports.delete = function (req, res) {
+    Post.delete(req.params.id, req.visitorId).then(() => {
+        req.flash("success", "Post successfully deleted!")
+        req.session.save( () => { res.redirect(`/profile/${req.session.user.username}`) })
+    }).catch(() => {
+        req.flash("errors", "You do not have permission to perform the action")
+        req.session.save( () => res.redirect('/'))
+    })
 }

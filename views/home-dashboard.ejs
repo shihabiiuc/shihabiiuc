@@ -2,6 +2,7 @@
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
+      <%- include('includes/flash') %>
       <h1 class="display-4">Hello <strong><%= user.username.charAt(0).toUpperCase() + user.username.slice(1) %></strong></h1>
       <p class="lead">Currently, we're working on the site and full features are not available right now. But things are really taking into shape very fast.</p>
     </div>

@@ -2,7 +2,9 @@ const express = require('express')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const flash = require('connect-flash')
+const markdown = require('marked')
 const app = express()
+const sanitizeHTML = require('sanitize-html')
 
 
 let sessionOptions = session({
@@ -23,6 +25,24 @@ app.set('view engine', 'ejs')
 
 //locals An object that contains response local variables scoped to the request
 app.use(function(req, res, next) {
+  // Make our markdown available in ejs templates
+  res.locals.filterUserHTML = function (content) {
+    // return markdown(content) //disable links on posts
+    return sanitizeHTML(markdown(content), {allowedTags: ['p', 'br', 'ul', 'ol', 'li', 'strong', 'bold', 'i', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'], allowedAttributes: {}})
+  }
+
+  // Make all flash message available on all templates
+  res.locals.errors = req.flash("errors")
+  res.locals.success = req.flash("success")
+
+  // Make current user id available on the req object
+  if (req.session.user) {
+      req.visitorId = req.session.user._id
+  } else {
+      req.visitorId = 0
+  }
+
+  // Make user session data available from within view templates
   res.locals.user = req.session.user
   next()
 })
