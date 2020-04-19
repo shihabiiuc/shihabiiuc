@@ -7,8 +7,29 @@
       <p class="lead">Currently, we're working on the site and full features are not available right now. But things are really taking into shape very fast.</p>
     </div>
   </div>
+
+  <div class="container py-md-5 container--narrow">
+
+      <% if(posts.length) { %>
+      <h2 class="text-center mb-4">The Latest From Those You Follow</h2>
+        <div class="list-group">
+          <% posts.forEach(function (post) { %>
+            <a href="/post/<%= post._id %>" class="list-group-item list-group-item-action">
+              <img class="avatar-tiny" src="<%= post.author.avatar %>">
+              <strong><%= post.title %></strong> <span class="text-muted small"> by <%= post.author.username %>on <%= post.createdDate.getMonth() + 1 %>/<%= post.createdDate.getDate() %>/<%= post.createdDate.getFullYear() %></span>
+            </a>
+          <% }) %>
+
+        </div>
+      <% } else { %>
+        <div class="text-center">
+          <h2>Your feed is empty, <strong><%= user.username.charAt(0).toUpperCase() + user.username.slice(1) %>!</strong></h2>
+          <p class="lead text-muted">Your feed displays the latest posts from the people you follow. If you don&rsquo;t have any friends to follow that&rsquo;s okay; you can use the &ldquo;Search&rdquo; feature in the top menu bar to find content written by people with similar interests and then follow them.</p>
+        </div>
+      <% } %>
+
+  </div>
+
   
-  <img src="../dog-photo-min.jpg" class="img-fluid border rounded mx-auto d-block" alt="Responsive image, dog photo">
-  <figcaption class="figure-caption text-center mb-5">This photo taken from <a href="https://unsplash.com/" target="_blank">Unsplash</a></figcaption>
-  
+
   <%- include('includes/footer') %>
