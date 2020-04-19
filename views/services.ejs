@@ -1,0 +1,20 @@
+<%- include('includes/header') %>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+</div>
+<!--Form-->
+<div class="container py-md-5 container--narrow">
+    <form action="/payment" method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Purchase Landing Page ($25) </label>
+            <input type="number" class="form-control" name="price" value="20">
+            <button type="submit" class="btn btn btn-danger">Make Payment</button>
+        </div>
+    </form>
+</div>
+
+<%- include('includes/footer') %>

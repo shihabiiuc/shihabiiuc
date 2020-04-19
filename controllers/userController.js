@@ -88,6 +88,12 @@ exports.home = async function(req, res) {
 exports.about = function(req, res) {
     res.render('about')
 }
+exports.portfolio = function (req, res) {
+    res.render('portfolio')
+}
+exports.services = function (req, res) {
+    res.render('services')
+}
 
 exports.ifUserExists = function (req, res, next) {
     User.findByUsername(req.params.username).then(function (userDocument) {

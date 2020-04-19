@@ -5,6 +5,13 @@ const flash = require('connect-flash')
 const markdown = require('marked')
 const app = express()
 const sanitizeHTML = require('sanitize-html')
+const paypal = require('paypal-rest-sdk')
+
+paypal.configure({
+    'mode': 'sandbox', //sandbox or live
+    'client_id': 'AYaC0RmnbByIe3GozZwAnysoDSo6teTkGXWuJUkVDRDC8gGCVCkJqlPAlXQaaLqttaTQBhuIAPtO1Vuu',
+    'client_secret': 'EJBXemdc2RbvotYJVvII5G6UzSOYDKDGmNmhhgc532saLSzhj6x1L5alCiKSVyQrrSYz7xNG26xyeVdM'
+});
 
 
 let sessionOptions = session({

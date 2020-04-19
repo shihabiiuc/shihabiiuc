@@ -3,9 +3,13 @@ const router = express.Router()
 const userController = require('./controllers/userController')
 const postController = require('./controllers/postController')
 const followController = require('./controllers/followController')
+const paymentController = require('./controllers/paymentController')
+
 
 router.get('/', userController.home)
 router.get('/about', userController.about)
+router.get('/portfolio', userController.portfolio)
+router.get('/services', userController.services)
 router.post('/register', userController.register)
 router.post('/login', userController.login)
 router.post('/logout', userController.logout)
@@ -26,5 +30,10 @@ router.post('/search', postController.search)
 // Follow related routes
 router.post('/addFollow/:username', userController.mustBeLoggedIn, followController.addFollow)
 router.post('/removeFollow/:username', userController.mustBeLoggedIn, followController.removeFollow)
+
+// Payment related routes
+router.post('/payment', paymentController.payment)
+router.get('/success', paymentController.success)
+router.get('/cancel', paymentController.cancel)
 
 module.exports = router

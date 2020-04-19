@@ -401,3 +401,8 @@ textarea.tall-textarea {
   background-color: #CCE5FF;
   transition: all 1s ease-out;
 }
+
+/*Portfolio*/
+.portfolio .card{
+  margin-bottom: 1.5rem;
+}
