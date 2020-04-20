@@ -89,6 +89,12 @@ body, .tooltip
 @media (max-width: 768px) {
   .display-3 {font-size: 2.5rem}
 }
+.display-4 {
+  font-size: 2.35rem;
+}
+@media (max-width: 768px) {
+  .display-4 {font-size: 1.5rem}
+}
 
 .form-group {
   position: relative;
@@ -401,8 +407,24 @@ textarea.tall-textarea {
   background-color: #CCE5FF;
   transition: all 1s ease-out;
 }
+.popup-contact-shihab--method{
+  background-color: #FFF;
+  padding: 2rem;
+  text-align: center;
+  max-width: 700px; height: auto;
+}
 
 /*Portfolio*/
 .portfolio .card{
   margin-bottom: 1.5rem;
+}
+
+/* Header/menu/navigation/pages-link */
+.general-pages li a{
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  .general-pages li a{
+    font-size: 22px;
+  }
 }

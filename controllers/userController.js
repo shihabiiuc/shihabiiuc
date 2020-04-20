@@ -94,6 +94,9 @@ exports.portfolio = function (req, res) {
 exports.services = function (req, res) {
     res.render('services')
 }
+exports.contact = function (req, res) {
+    res.render('contact')
+}
 
 exports.ifUserExists = function (req, res, next) {
     User.findByUsername(req.params.username).then(function (userDocument) {

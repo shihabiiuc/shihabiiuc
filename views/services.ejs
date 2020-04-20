@@ -2,19 +2,38 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
+        <h1 class="display-4">Web Design &amp; Development Service</h1>
         <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <hr>
     </div>
 </div>
-<!--Form-->
-<div class="container py-md-5 container--narrow">
-    <form action="/payment" method="POST">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Purchase Landing Page ($25) </label>
-            <input type="number" class="form-control" name="price" value="20">
-            <button type="submit" class="btn btn btn-danger">Make Payment</button>
-        </div>
-    </form>
+
+<div class="container py-md-5">
+    <div class="card-deck text-center">
+        <%- include('./service-packages/basic') %>
+        <%- include('./service-packages/standard') %>
+        <%- include('./service-packages/ecommerce') %>
+    </div>
 </div>
+
+<div class="container py-md-5 container--narrow">
+    <p class="lead">
+        Registering on our website isn&apos;t mandatory to purchase any of our services or making payment. Once you create an order &amp; make payment, we&apos;ll contact you through your email associated with your payment method. If your contact email is different, you can update us at anytime and also you can change your contact email or other contact method with us. Further information will be found on your invoice. If you have any questions, please contact Shihab: <code>shihabdinajpur&commat;gmail.com</code>
+    </p>
+    <p class="lead">
+        If you&apos;ve different types of web designing &amp; developing requirements including redesigning, customizing, please contact for a quick discussion to get a perfect ROI, deadline &amp; quote.
+    </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 <%- include('includes/footer') %>
