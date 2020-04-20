@@ -5,12 +5,14 @@ const postController = require('./controllers/postController')
 const followController = require('./controllers/followController')
 const paymentController = require('./controllers/paymentController')
 
-
+// General route
 router.get('/', userController.home)
 router.get('/about', userController.about)
 router.get('/portfolio', userController.portfolio)
 router.get('/services', userController.services)
 router.get('/contact', userController.contact)
+router.get('/success', userController.success)
+router.get('/cancel', userController.cancel)
 router.post('/register', userController.register)
 router.post('/login', userController.login)
 router.post('/logout', userController.logout)
@@ -20,6 +22,7 @@ router.get('/profile/:username', userController.ifUserExists, userController.sha
 router.get('/profile/:username/followers', userController.ifUserExists, userController.sharedProfileData, userController.profileFollowersScreen)
 router.get('/profile/:username/following', userController.ifUserExists, userController.sharedProfileData, userController.profileFollowingScreen)
 
+// Post related routes
 router.get('/create-ticket', userController.mustBeLoggedIn, postController.viewCreateScreen)
 router.post('/create-ticket', userController.mustBeLoggedIn, postController.create)
 router.get('/post/:id', postController.viewSingle)

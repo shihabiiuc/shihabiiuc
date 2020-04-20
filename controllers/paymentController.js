@@ -10,8 +10,8 @@ exports.payment = function (req, res) {
             "payment_method": "paypal"
         },
         "redirect_urls": {
-            "return_url": "http://localhost:3000/success",
-            "cancel_url": "http://localhost:3000/cancel"
+            "return_url": "https://shihabiiuc.herokuapp.com/success",
+            "cancel_url": "https://shihabiiuc.herokuapp.com/cancel"
         },
         "transactions": [{
             "item_list": {
@@ -67,11 +67,11 @@ exports.success = function (req, res) {
             //console.log(JSON.stringify(payment));
             let paymentInfo = JSON.stringify(payment)
             //res.send(paymentInfo)
-            res.send('Payment successfully transferred')
+            res.render('success-payment')
         }
     });
 }
 
 exports.cancel = function (req, res) {
-    res.send('Payment has been cancelled')
+    res.render('cancel-payment')
 }

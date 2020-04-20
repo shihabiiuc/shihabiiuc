@@ -97,6 +97,12 @@ exports.services = function (req, res) {
 exports.contact = function (req, res) {
     res.render('contact')
 }
+exports.success = function (req, res) {
+    res.render('success-payment')
+}
+exports.cancel = function (req, res) {
+    res.render('cancel-payment')
+}
 
 exports.ifUserExists = function (req, res, next) {
     User.findByUsername(req.params.username).then(function (userDocument) {
