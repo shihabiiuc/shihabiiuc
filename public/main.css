@@ -432,3 +432,6 @@ textarea.tall-textarea {
 /*
  * Contact page
  */
+.privacy-policy p{
+  font-family: "Times New Roman", Times, serif;
+}

@@ -103,6 +103,12 @@ exports.success = function (req, res) {
 exports.cancel = function (req, res) {
     res.render('cancel-payment')
 }
+exports.privacy = function (req, res) {
+    res.render('privacy-policy')
+}
+exports.refund = function (req, res) {
+    res.render('refund-policy')
+}
 
 exports.ifUserExists = function (req, res, next) {
     User.findByUsername(req.params.username).then(function (userDocument) {
