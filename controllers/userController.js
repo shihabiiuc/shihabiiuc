@@ -75,39 +75,84 @@ exports.logout = function(req, res) {
 }
 
 exports.home = async function(req, res) {
+    res.locals.metaTags = {
+        title: "Web Developer for your business: Nodejs, php, WordPress, JavaScript | Shihabiiuc",
+        description: "Providing web design & development service around the globe since 2016, created large number of websites which helped business owners to boost their reputation.",
+        keywords: "web designer, web developer"
+    }
     if(req.session.user) {
         // Lets feed post from current user
         let posts = await Post.getFeed(req.session.user._id)
 
-        res.render('home-dashboard', {posts: posts})
+        res.render('home-dashboard', {posts: posts, metatags: res.locals.metaTags})
     }else {
-        res.render('home-guest', {regErrors: req.flash('regErrors')})
+        res.render('home-guest', {regErrors: req.flash('regErrors'), metatags: res.locals.metaTags})
     }
 }
 
 exports.about = function(req, res) {
-    res.render('about')
+    res.locals.metaTags = {
+        title: "About web design & development skill, my work process",
+        description: "Build wordpress websites, worked with popular wordpress themes, plugins & page builder: divi, flatsome, woodmart, acf, woocommerce.",
+        keywords: "wordpress, developer"
+    }
+    res.render('about', {metatags: res.locals.metaTags})
 }
 exports.portfolio = function (req, res) {
-    res.render('portfolio')
+    res.locals.metaTags = {
+        title: "Web development portfolio, work samples of WordPress & more",
+        description: "My web design & development portfolio, past work samples with live website URLs.",
+        keywords: "portfolio, website"
+    }
+    res.render('portfolio', {metatags: res.locals.metaTags})
 }
 exports.services = function (req, res) {
-    res.render('services')
+    res.locals.metaTags = {
+        title: "Website design & development services and offer",
+        description: "Order & make payment for designing & developing your website. Mobile responsive design, highly secured, spam protected, easy to navigate website.",
+        keywords: "hire, web developer"
+    }
+    res.render('services', {metatags: res.locals.metaTags})
 }
 exports.contact = function (req, res) {
-    res.render('contact')
+    res.locals.metaTags = {
+        title: "Contact me to design & develop your website, fix error & bug",
+        description: "Contact me if you have any questions about my web design & development skills, process or work, or if you want to hire a web developer.",
+        keywords: "contact, hire"
+    }
+    res.render('contact', {metatags: res.locals.metaTags})
 }
 exports.success = function (req, res) {
-    res.render('success-payment')
+    res.locals.metaTags = {
+        title: "Order Received & Payment Received Successfully! -Shihabiiuc",
+        description: "Your order & payment has been received successfully. We'll be in tourch with you shortly.",
+        keywords: "order, payment"
+    }
+    res.render('success-payment', {metatags: res.locals.metaTags})
 }
 exports.cancel = function (req, res) {
-    res.render('cancel-payment')
+    res.locals.metaTags = {
+        title: "Order Cancelled | Shihabiiuc",
+        description: "Your order has been cancelled and your account has not been charged.",
+        keywords: "cancel, order"
+    }
+    res.render('cancel-payment', {metatags: res.locals.metaTags})
 }
 exports.privacy = function (req, res) {
-    res.render('privacy-policy')
+    res.locals.metaTags = {
+        title: "Privacy Policy | Shihabiiuc",
+        description: "Privacy policy for our website Shihabiiuc.Com. This page describes which information we collect and how we use it.",
+        keywords: "privacy policy"
+    }
+    res.render('privacy-policy', {metatags: res.locals.metaTags})
 }
 exports.refund = function (req, res) {
-    res.render('refund-policy')
+    res.locals.metaTags = {
+        title: "Refund Policy | Shihabiiuc",
+        description: "Refund policy for our website design & development services.",
+        keywords: "refund policy"
+    }
+    res.render('refund-policy', {metatags: res.locals.metaTags})
 }
 
 exports.ifUserExists = function (req, res, next) {

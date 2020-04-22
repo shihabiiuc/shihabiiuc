@@ -25,8 +25,8 @@ router.get('/profile/:username/followers', userController.ifUserExists, userCont
 router.get('/profile/:username/following', userController.ifUserExists, userController.sharedProfileData, userController.profileFollowingScreen)
 
 // Post related routes
-router.get('/create-ticket', userController.mustBeLoggedIn, postController.viewCreateScreen)
-router.post('/create-ticket', userController.mustBeLoggedIn, postController.create)
+router.get('/create-post', userController.mustBeLoggedIn, postController.viewCreateScreen)
+router.post('/create-post', userController.mustBeLoggedIn, postController.create)
 router.get('/post/:id', postController.viewSingle)
 router.get('/post/:id/edit', userController.mustBeLoggedIn, postController.viewEditScreen)
 router.post('/post/:id/edit', userController.mustBeLoggedIn, postController.edit)

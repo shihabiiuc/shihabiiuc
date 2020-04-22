@@ -425,7 +425,7 @@ textarea.tall-textarea {
 }
 @media (min-width: 1200px) {
   .general-pages li a{
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -434,4 +434,14 @@ textarea.tall-textarea {
  */
 .privacy-policy p{
   font-family: "Times New Roman", Times, serif;
+}
+
+/*
+ * Footer
+ */
+footer .list-group .list-group-item{
+  border: none;
+}
+footer .payment-info img{
+  width: 100px; height: auto;
 }

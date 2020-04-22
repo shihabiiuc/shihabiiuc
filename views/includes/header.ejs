@@ -2,8 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="100 days of code challenges, this is a node js application for testing and learning node.js, express js, javascript &amp; mongodb.">
-  <meta name="keywords" content="100daysofcode, node, js, nodejs, express, mongodb, javascript, web developer, web designer, freelancer, wordpress, ecommerce">
+  <% var metatags %>
+  <title>
+    <% if (metatags === undefined) { %>
+      <%= "Web Developer for your business: Nodejs, php, WordPress, JavaScript | Shihabiiuc" %>
+    <% } else { %>
+      <%= metatags.title %>
+    <% } %>
+  </title>
+  <meta name="description" content="<% if (metatags === undefined) { %>
+    <%= "Web designer & developer team for your business. We design & develop websites using Nodejs, Express, MongoDB, JavaScript and WordPress." %>
+  <% } else { %>
+    <%= metatags.description %>
+  <% } %>">
+  <meta name="keywords" content="<% if (metatags === undefined) { %>
+    <%= "web developer, web designer, web design, wordpress, nodejs, express, mongodb, javascript, ecommerce" %>
+  <% } else { %>
+    <%= metatags.keywords %>
+  <% } %>">
   <meta name="author" content="Shihab Ul Haque">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,27 +27,28 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@shihabiiuc">
   <meta name="twitter:creator" content="@shihabiiuc">
-  <meta name="twitter:title" content="#100DaysOfCode -Node JS, Express JS, MongoDB, much more">
-  <meta name="twitter:description" content="100 Days of Code is a challenge made for developers. There are two main rules in the #100DaysOfCode, code minimum an hour a day &amp; tweet regarding the progress mentioning the #100DaysOfCode hash tag. I'm Shihab and I've participated in the 100 days of code from April 12, 2020. In this challenge I'm building a Node JS application.">
-  <meta name="twitter:image" content="https://shihabiiuc.herokuapp.com/twitter-card.jpg">
+  <meta name="twitter:title" content="Web Development for Your Business: Nodejs, Express, JavaScript, MongoDB; PHP, WordPress">
+  <meta name="twitter:description" content="Providing web design & development service around the globe since 2016, created large number of websites for clients which helped business owners to boost their reputations, getting more sales & conversion. No one was regretted hiring me!">
+  <meta name="twitter:image" content="http://www.shihabiiuc.com/twitter-card.jpg">
   <!-- Twitter Card End -->
   <!-- Linkedin Card -->
-  <meta property='og:title' content="Built for Developers -Node JS, Express JS, MongoDB"/>
-  <meta property='og:image' content="https://shihabiiuc.herokuapp.com/linkedin-card.jpg"/>
-  <meta property='og:description' content="Node JS, Express JS, MongoDB project on #100DaysOfCode. Programming, testing & deploy. Sharing knowledge, maintain best practices, cooperate each other. Join the community, solve challenges &amp; gain JS muscle."/>
-  <meta property='og:url' content="https://shihabiiuc.herokuapp.com/" />
+  <meta property='og:title' content="Web Development for Your Business: Nodejs, Express, JavaScript, MongoDB; PHP, WordPress"/>
+  <meta property='og:image' content="http://www.shihabiiuc.com/linkedin-card.jpg"/>
+  <meta property='og:description' content="Providing web design & development service around the globe since 2016, created large number of websites for clients which helped business owners to boost their reputations, getting more sales & conversion. No one was regretted hiring me!"/>
+  <meta property='og:url' content="http://www.shihabiiuc.com/" />
   <!-- Linkedin Card End -->
-  <title>100 Days of Code</title>
+
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="/main.css">
+  <meta name="google-site-verification" content="uYpe2fhnK8K3ZtfivJA2_QdpeWys0wJ2bqnjZtS8Dig" />
 </head>
 <body>
   <header class="header-bar">
     <div class="container d-flex flex-column flex-md-row align-items-center p-3">
-      <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="text-white">#100DaysOfCode</a></h4>
+      <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="text-white">Shihabiiuc</a></h4>
       <ul class="nav mr-md-auto general-pages">
         <li class="nav-item">
           <a class="nav-link text-muted" href="/about">About</a>
@@ -53,7 +70,7 @@
           <!--<span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment"></i></span>
           -->
           <a href="/profile/<%= user.username %>" class="mr-2"><img title="My Profile" data-toggle="tooltip" data-placement="bottom" style="width: 32px; height: 32px; border-radius: 16px;" src="<%= user.avatar %>"></a>
-          <a class="btn btn-sm btn-danger mr-2" href="/create-ticket">Support Ticket</a>
+          <a class="btn btn-sm btn-danger mr-2" href="/create-post">Create Post</a>
           <form action="/logout" method="POST" class="d-inline">
             <button class="btn btn-sm btn-secondary">Logout</button>
           </form>
@@ -74,8 +91,5 @@
         </form>
       <% } %>
 
-
-
-    
     </div>
   </header>

@@ -10,8 +10,8 @@ exports.payment = function (req, res) {
             "payment_method": "paypal"
         },
         "redirect_urls": {
-            "return_url": "https://shihabiiuc.herokuapp.com/success",
-            "cancel_url": "https://shihabiiuc.herokuapp.com/cancel"
+            "return_url": "http://www.shihabiiuc.com/success",
+            "cancel_url": "http://www.shihabiiuc.com/cancel"
         },
         "transactions": [{
             "item_list": {

@@ -8,7 +8,7 @@ exports.create = function (req, res) {
     let post = new Post(req.body, req.session.user._id)
     //this body is middleware
     post.create().then(function(newId) {
-        req.flash("success", "New ticket successfully created!")
+        req.flash("success", "New post successfully created!")
         req.session.save(function () {
             res.redirect(`/post/${newId}`)
         })
