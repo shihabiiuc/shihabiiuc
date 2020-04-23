@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /controllers/
+Disallow: /frontend-js/
+Disallow: /models/
+Disallow: /public/
+Disallow: /views/
+Disallow: /app.js
+Disallow: /db.js
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /Procfile
+Disallow: /README.md
+Disallow: /router.js
+Disallow: /webpack.config.js
+Disallow: http://www.shihabiiuc.com/success
+Disallow: http://www.shihabiiuc.com/cancel
+
+Sitemap: http://www.shihabiiuc.com/sitemap.xml

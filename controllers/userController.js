@@ -76,8 +76,8 @@ exports.logout = function(req, res) {
 
 exports.home = async function(req, res) {
     res.locals.metaTags = {
-        title: "Web Developer for your business: Nodejs, php, WordPress, JavaScript | Shihabiiuc",
-        description: "Providing web design & development service around the globe since 2016, created large number of websites which helped business owners to boost their reputation.",
+        title: "Web Designer & Developer: builds stunning online presence",
+        description: "Providing web design & development service around the globe, created large number of websites which helped business owners to boost their reputation.",
         keywords: "web designer, web developer"
     }
     if(req.session.user) {
