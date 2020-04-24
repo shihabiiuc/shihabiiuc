@@ -154,6 +154,17 @@ exports.refund = function (req, res) {
     }
     res.render('refund-policy', {metatags: res.locals.metaTags})
 }
+exports.subscribe = function (req, res) {
+    res.locals.metaTags = {
+        title: "Subscribe to our web design newsletter",
+        description: "Get our web design news, update, coupons, new services, our forum & blog articles, tutorials.",
+        keywords: "newsletter, web design"
+    }
+    res.render('subscribe', {metatags: res.locals.metaTags})
+}
+exports.thankyou = function (req, res) {
+    res.render('thank-you')
+}
 
 exports.ifUserExists = function (req, res, next) {
     User.findByUsername(req.params.username).then(function (userDocument) {
