@@ -1,4 +1,3 @@
 RewriteEngine On
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\.shihabiiuc\.com$ [NC]
-RewriteRule ^(.*)$ https://www.shihabiiuc.com/$1 [L,R=301]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
