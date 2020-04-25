@@ -9,6 +9,14 @@ const paypal = require('paypal-rest-sdk')
 const dotenv = require('dotenv')
 dotenv.config()
 
+// Forcing to ssl
+app.use(function(req, res, next) {
+    if(!req.secure) {
+        return res.redirect(['https://', req.get('Host'), req.url].join(''));
+    }
+    next();
+});
+
 paypal.configure({
     'mode': 'live', //sandbox or live
     'client_id': process.env.CLIENTID,
