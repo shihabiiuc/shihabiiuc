@@ -106,13 +106,13 @@ exports.portfolio = function (req, res) {
     }
     res.render('portfolio', {metatags: res.locals.metaTags})
 }
-exports.services = function (req, res) {
+exports.pricing = function (req, res) {
     res.locals.metaTags = {
         title: "Website design & development services and offer",
         description: "Order & make payment for designing & developing your website. Mobile responsive design, highly secured, spam protected, easy to navigate website.",
         keywords: "hire, web developer"
     }
-    res.render('services', {metatags: res.locals.metaTags})
+    res.render('pricing', {metatags: res.locals.metaTags})
 }
 exports.contact = function (req, res) {
     res.locals.metaTags = {
@@ -121,6 +121,14 @@ exports.contact = function (req, res) {
         keywords: "contact, hire"
     }
     res.render('contact', {metatags: res.locals.metaTags})
+}
+exports.faq = function (req, res) {
+    res.locals.metaTags = {
+        title: "Frequently asked questions about website design pricing",
+        description: "Frequently asked questions regarding website designing & developing pricing and the answers of the questions.",
+        keywords: "faq, question"
+    }
+    res.render('faq', {metatags: res.locals.metaTags})
 }
 exports.success = function (req, res) {
     res.locals.metaTags = {

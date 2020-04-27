@@ -1,9 +1,12 @@
 body, .tooltip
  {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 img{
   max-width: 100%;
+}
+.jumbotron h1, .jumbotron p, .jumbotron span{
+  max-width: 1000px;
 }
 
 .header-bar {
@@ -424,20 +427,18 @@ textarea.tall-textarea {
 
 /* Header/menu/navigation/pages-link */
 .general-pages li a{
-  font-size: 14px;
+  font-size: 12px;
 }
 @media (min-width: 1200px) {
   .general-pages li a{
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
 /*
  * Contact page
  */
-.privacy-policy p{
-  font-family: "Times New Roman", Times, serif;
-}
+
 
 /*
  * Footer
@@ -447,4 +448,12 @@ footer .list-group .list-group-item{
 }
 footer .payment-info img{
   width: 100px; height: auto;
+}
+
+/*
+ * FAQ
+ */
+.accordion .card-body{
+  line-height: 1.7;
+  font-size: 1.3rem;
 }
