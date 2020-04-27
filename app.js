@@ -37,7 +37,7 @@ app.use(function(req, res, next) {
   // Make our markdown available in ejs templates
   res.locals.filterUserHTML = function (content) {
     // return markdown(content) //disable links on posts
-    return sanitizeHTML(markdown(content), {allowedTags: ['p', 'br', 'ul', 'ol', 'li', 'strong', 'bold', 'i', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'], allowedAttributes: {}})
+    return sanitizeHTML(markdown(content), {allowedTags: ['code','p', 'br', 'ul', 'ol', 'li', 'strong', 'bold', 'i', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'], allowedAttributes: {}})
   }
 
   // Make all flash message available on all templates
