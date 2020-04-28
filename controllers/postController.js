@@ -47,7 +47,7 @@ exports.edit = function (req, res) {
     let post = new Post(req.body, req.visitorId, req.params.id)
     post.update().then( (status) => {
         if (status == "success") {
-            req.flash("success", "Ticket updated successfully")
+            req.flash("success", "Post updated successfully")
             req.session.save(function () {
                 res.redirect(`/post/${req.params.id}/edit`)
             })
