@@ -438,8 +438,35 @@ textarea.tall-textarea {
 /*
  * Contact page
  */
+.contact_page{
+  background-color: #2f464c;
+}
+.contact_page h1{
+  color: #FFF;
+}
+.contact_page .lead {
+  color: #c0d322;
+}
+.contact_page .display-4{
+  color: #FFF;
+}
 
-
+/*
+ * Subscription Page
+ */
+.subscription_page {
+  background-color: #2f464c;
+}
+.subscription_page #emailHelp{
+  color: #c0d322;
+}
+.subscription_page label{
+  color: #FFF;
+}
+.subscription_page #mc-embedded-subscribe{
+  background-color: #cc2921;
+  color: #FFF;
+}
 
 /*
  * Footer
