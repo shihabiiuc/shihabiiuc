@@ -23,6 +23,12 @@ img{
   text-shadow: 2px 1px #000;
   box-shadow: 0 1rem 3rem rgba(0, 66, 254, 0.44);
   transition: all 0.8s ease-out;
+  font-size: 15px;
+}
+@media (min-width: 768px){
+  .bg-deeper {
+    font-size: 20px;
+  }
 }
 .bg-deeper:hover{
   background-color: #6f0904;
