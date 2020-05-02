@@ -89,7 +89,14 @@ exports.home = async function(req, res) {
         res.render('home-guest', {regErrors: req.flash('regErrors'), metatags: res.locals.metaTags})
     }
 }
-
+exports.showOfferPage = function (req, res) {
+    res.locals.metaTags = {
+        title: "Quality Web Development with Affordable Price",
+        description: "International Workers Day Offer! Quality web design & development at reduced/affordable price.",
+        keywords: "international workers day, offer, may"
+    }
+    res.render('international-workers-day-offer', {metatags: res.locals.metaTags})
+}
 exports.about = function(req, res) {
     res.locals.metaTags = {
         title: "About web design & development skill, my work process",

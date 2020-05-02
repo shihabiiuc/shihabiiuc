@@ -1,0 +1,39 @@
+<%- include('includes/header') %>
+
+<div class="bg-offer py-5">
+    <div class="container container--narrow">
+        <h1 class="text-white text-center">Quality Web Development at Affordable Price (&dollar;50)</h1>
+        <p class="text-white text-center"><small>International Workers' Day Offer</small></p>
+    </div>
+</div>
+
+<div class="bg-deep py-5">
+    <div class="container container--narrow">
+        <h6 class="display-4 text-white">What You&apos;ll Get:</h6>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">1. A complete website with 3 unique pages such as <u>Home</u>, <u>About</u>, <u>Contact</u> or something along those lines.</li>
+            <li class="list-group-item">2. Unique layout, design &amp; feel based on your NICHE.</li>
+            <li class="list-group-item">3. Customizable Dashboard.</li>
+            <li class="list-group-item">4. You can add unlimited posts &amp; page with few clicks.</li>
+            <li class="list-group-item">5. Responsive for mobile, tabs &amp; large devices.</li>
+        </ul>
+
+        <h6 class="display-4 text-white pt-4">Prerequisite:</h6>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">1. A Domain &amp; Hosting<br>
+                <small>If you don&apos;t have it yet, I&apos;ll be more than happy to assist you with the domain &amp; hosting.</small>
+            </li>
+        </ul>
+
+        <div class="pt-5">
+            <form action="/payment" method="POST">
+                <input type="number" class="form-control d-none" name="price" value="50">
+                <button type="submit" class="btn btn-lg bg-deeper">Order &amp; Get Your Website Done</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<%- include('includes/footer') %>

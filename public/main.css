@@ -8,6 +8,27 @@ img{
 .jumbotron h1, .jumbotron p, .jumbotron span{
   max-width: 1000px;
 }
+.bg-offer{
+  background-color: #c4251e;
+  background-image: url(labour-day-min.png);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.bg-deep{
+  background-color: #001524;
+}
+.bg-deeper{
+  background-color: #c4251e;
+  color: #FFF;
+  text-shadow: 2px 1px #000;
+  box-shadow: 0 1rem 3rem rgba(0, 66, 254, 0.44);
+  transition: all 0.8s ease-out;
+}
+.bg-deeper:hover{
+  background-color: #6f0904;
+  color: #FFF;
+  text-shadow: 3px 2px #000;
+}
 
 .header-bar {
   background-color: #292929;

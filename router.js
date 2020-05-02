@@ -22,6 +22,9 @@ router.post('/register', userController.register)
 router.post('/login', userController.login)
 router.post('/logout', userController.logout)
 
+// Offer related routes
+router.get('/quality-web-development-with-affordable-price', userController.showOfferPage)
+
 // Profile related routes
 router.get('/profile/:username', userController.ifUserExists, userController.sharedProfileData, userController.profilePostScreen)
 router.get('/profile/:username/followers', userController.ifUserExists, userController.sharedProfileData, userController.profileFollowersScreen)

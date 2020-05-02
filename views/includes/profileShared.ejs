@@ -7,7 +7,6 @@
     <% } else { %>
         <form class="ml-2 d-inline" action="/addFollow/<%= profileUsername %>" method="POST">
             <button class="btn btn-success btn-sm">Follow <i class="fas fa-user-plus"></i></button>
-
         </form>
     <% }
 
@@ -16,6 +15,8 @@
 
 <div class="profile-nav nav nav-tabs pt-2 mb-4">
     <a href="/profile/<%= profileUsername %>" class="profile-nav-link nav-item nav-link <%= currentPage == "posts" ? 'active' : '' %>">Posts: <%= counts.postCount %></a>
+<!--
     <a href="/profile/<%= profileUsername %>/followers" class="profile-nav-link nav-item nav-link <%= currentPage == "followers" ? 'active' : '' %>">Followers: <%= counts.followerCount %></a>
     <a href="/profile/<%= profileUsername %>/following" class="profile-nav-link nav-item nav-link <%= currentPage == "following" ? 'active' : '' %>">Following: <%= counts.followingCount %></a>
+-->
 </div>
