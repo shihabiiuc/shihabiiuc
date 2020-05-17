@@ -1,33 +1,62 @@
 <%- include('includes/header') %>
 
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">Web Design &amp; Development Pricing</h1>
-        <p class="lead">Built with WordPress, premium themes or custom written themes, mobile responsive design, SEO tool setup &amp; optimized, highest security, spam protection, fast loading speed optimization, content upload, and much more.</p>
-        <p>Extra benefit: Future support &amp; friendly cooperation, prompt reply, customization, Git version control.</p>
-        <hr>
-    </div>
+  <div class="container">
+    <h1 class="display-4">Web Design &amp; Development Pricing</h1>
+    <p class="lead">Built with WordPress, premium themes or custom written themes, mobile responsive design, SEO tool setup &amp; optimized, highest security, spam protection, fast loading speed optimization, content upload, and much more.</p>
+    <p>Extra benefit: Future support &amp; friendly cooperation, prompt reply, customization, Git version control.</p>
+    <hr />
+  </div>
 </div>
 
 <div class="container py-md-5">
-    <div class="card-deck text-center">
-        <%- include('./pricing-packages/basic') %>
-        <%- include('./pricing-packages/standard') %>
-        <%- include('./pricing-packages/ecommerce') %>
+  <div class="card-deck text-center">
+    <%- include('./pricing-packages/basic') %> <%- include('./pricing-packages/standard') %> <%- include('./pricing-packages/ecommerce') %>
+  </div>
+</div>
+
+<!-- Testimonial -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <h2 class="text-center text-success">Client&apos;s Feedback</h2>
+    <div class="carousel-item active">
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">Shihab Haque is an incredible web designer and proficient at "all things" web related. I highly recommend him. He's honest, patient and a very hard working. I've used him for all our web related work and will continue to hire Shihab in the future!</p>
+        <footer class="blockquote-footer">
+          Jillkahn, Empowerhouse Group, <cite title="Source URL"><a href="https://www.instagram.com/empowerhouseleadership/" target="_blank">IG Profile</a></cite>
+        </footer>
+      </blockquote>
     </div>
+    <div class="carousel-item">
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">I was really impressed by the efficiency, speed and technical support of Shihab. When I need it, I will certainly use his services because I am really satisfied with his job.</p>
+        <footer class="blockquote-footer">
+          Diamoro, Brioschisrl, <cite title="Client wants to be anonymous"><a class="link-disabled" href="https://www.brioschisrl.it/" target="_blank">Website&sol;Profile</a></cite>
+        </footer>
+      </blockquote>
+    </div>
+    <div class="carousel-item">
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">Shihabiiuc is the absolute best! He is a great designer, wordpress guru and great to work with and will get take care of you. I will continue to use him for all our work.</p>
+        <footer class="blockquote-footer">
+          Upchurch, 33supply, <cite title="Source URL"><a href="https://www.instagram.com/33supply/" target="_blank">IG Profile</a></cite>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
 </div>
 
 <div class="container py-md-5 container--narrow">
-    <p class="lead">
-        Registering on our website isn&apos;t mandatory to purchase any of our services or making payment. Once you create an order &amp; make payment, we&apos;ll contact you through your email associated with your payment method. If your contact email is different, you can update us at anytime and also you can change your contact email or other contact method with us. Further information will be found on your invoice. If you have any questions, please contact Shihab: <code>shihabdinajpur&commat;gmail.com</code>
-    </p>
-    <p class="lead">
-        If you&apos;ve different types of web designing &amp; developing requirements including redesigning, customizing, please contact for a quick discussion to get a perfect ROI, deadline &amp; quote.
-    </p>
-</div>
-
-<div class="container py-md-5 container--narrow text-center mb-5">
-    <a href="https://www.bluehost.com/track/shihabiiuc/pricing" target="_blank"> <img border="0" src="https://bluehost-cdn.com/media/partner/images/shihabiiuc/430x288/430x288PW.png"> </a>
+  <p class="lead">Registering on our website isn&apos;t mandatory to purchase any of our services or making payment. Once you create an order &amp; make payment, we&apos;ll contact you to your email associated with your payment method. If your contact email is different, you can update us at anytime and also you can change your contact email or you can use other contact method with us. Further information will be found on your invoice. If you have any questions, please contact us.</p>
+  <p class="lead text-muted">
+    If you&apos;ve different types of web designing &amp; developing requirements including redesigning, customizing, please contact for a quick discussion to get a perfect ROI, deadline &amp; quote.
+  </p>
 </div>
 
 <%- include('includes/footer') %>
