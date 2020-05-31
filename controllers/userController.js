@@ -24,69 +24,69 @@ exports.sharedProfileData = async function (req, res, next) {
     next()
 }
 
-exports.register = function(req, res) {
+exports.register = function (req, res) {
     let user = new User(req.body)
     user.register().then(() => {
-        req.session.user = {username: user.data.username, avatar: user.avatar, _id: user.data._id}
-        req.session.save(function() {
+        req.session.user = { username: user.data.username, avatar: user.avatar, _id: user.data._id }
+        req.session.save(function () {
             res.redirect('/')
-        })          
+        })
     }).catch((regErrors) => {
-        regErrors.forEach(function(err) {
+        regErrors.forEach(function (err) {
             req.flash('regErrors', err)
         })
-        req.session.save(function() {
+        req.session.save(function () {
             res.redirect('/')
         })
     })
-    
+
 }
 
-exports.mustBeLoggedIn = function(req, res, next) {
-    if(req.session.user) {
+exports.mustBeLoggedIn = function (req, res, next) {
+    if (req.session.user) {
         next()
-    }else {
+    } else {
         req.flash("errors", "You must be logged in to perform the action")
-        req.session.save(function() {
+        req.session.save(function () {
             res.redirect('/')
         })
     }
 }
 
-exports.login = function(req, res) {
+exports.login = function (req, res) {
     let user = new User(req.body)
-    user.login().then(function(x) {
-        req.session.user = {avatar: user.avatar, username: user.data.username, _id: user.data._id}
-        req.session.save(function() {
+    user.login().then(function (x) {
+        req.session.user = { avatar: user.avatar, username: user.data.username, _id: user.data._id }
+        req.session.save(function () {
             res.redirect('/')
         })
-    }).catch(function(y) {
+    }).catch(function (y) {
         req.flash('errors', y)
-        req.session.save(function() {
+        req.session.save(function () {
             res.redirect('/')
-        })        
+        })
     })
 }
 
-exports.logout = function(req, res) {
-    req.session.destroy(function() {
+exports.logout = function (req, res) {
+    req.session.destroy(function () {
         res.redirect('/')
     })
 }
 
-exports.home = async function(req, res) {
+exports.home = async function (req, res) {
     res.locals.metaTags = {
         title: "Web Designer & Developer: builds stunning online presence",
         description: "Providing web design & development service around the globe, created large number of websites which helped business owners to boost their reputation.",
         keywords: "web designer, web developer"
     }
-    if(req.session.user) {
+    if (req.session.user) {
         // Lets feed post from current user
         let posts = await Post.getFeed(req.session.user._id)
 
-        res.render('home-dashboard', {posts: posts, metatags: res.locals.metaTags})
-    }else {
-        res.render('home-guest', {regErrors: req.flash('regErrors'), metatags: res.locals.metaTags})
+        res.render('home-dashboard', { posts: posts, metatags: res.locals.metaTags })
+    } else {
+        res.render('home-guest', { regErrors: req.flash('regErrors'), metatags: res.locals.metaTags })
     }
 }
 exports.showOfferPage = function (req, res) {
@@ -95,15 +95,15 @@ exports.showOfferPage = function (req, res) {
         description: "International Workers Day Offer! Quality web design & development at reduced/affordable price.",
         keywords: "international workers day, offer, may"
     }
-    res.render('international-workers-day-offer', {metatags: res.locals.metaTags})
+    res.render('international-workers-day-offer', { metatags: res.locals.metaTags })
 }
-exports.about = function(req, res) {
+exports.about = function (req, res) {
     res.locals.metaTags = {
         title: "About web design & development skill, my work process",
         description: "Build wordpress websites, worked with popular wordpress themes, plugins & page builder: divi, flatsome, woodmart, acf, woocommerce.",
         keywords: "wordpress, developer"
     }
-    res.render('about', {metatags: res.locals.metaTags})
+    res.render('about', { metatags: res.locals.metaTags })
 }
 exports.portfolio = function (req, res) {
     res.locals.metaTags = {
@@ -111,7 +111,7 @@ exports.portfolio = function (req, res) {
         description: "My web design & development portfolio, past work samples with live website URLs.",
         keywords: "portfolio, website"
     }
-    res.render('portfolio', {metatags: res.locals.metaTags})
+    res.render('portfolio', { metatags: res.locals.metaTags })
 }
 exports.pricing = function (req, res) {
     res.locals.metaTags = {
@@ -119,7 +119,7 @@ exports.pricing = function (req, res) {
         description: "Order & make payment for designing & developing your website. Mobile responsive design, highly secured, spam protected, easy to navigate website.",
         keywords: "hire, web developer"
     }
-    res.render('pricing', {metatags: res.locals.metaTags})
+    res.render('pricing', { metatags: res.locals.metaTags })
 }
 exports.contact = function (req, res) {
     res.locals.metaTags = {
@@ -127,7 +127,7 @@ exports.contact = function (req, res) {
         description: "Contact me if you have any questions about my web design & development skills, process or work, or if you want to hire a web developer.",
         keywords: "contact, hire"
     }
-    res.render('contact', {metatags: res.locals.metaTags})
+    res.render('contact', { metatags: res.locals.metaTags })
 }
 exports.faq = function (req, res) {
     res.locals.metaTags = {
@@ -135,7 +135,15 @@ exports.faq = function (req, res) {
         description: "Frequently asked questions regarding website designing & developing pricing and the answers of the questions.",
         keywords: "faq, question"
     }
-    res.render('faq', {metatags: res.locals.metaTags})
+    res.render('faq', { metatags: res.locals.metaTags })
+}
+exports.salon = function (req, res) {
+    res.locals.metaTags = {
+        title: "Barber Hair Salon Website Design and Development",
+        description: "Website design and development for Hair Salons & Barbers, FREE Domain and Hosting included in this website development package. Everything will cost $50 only, contact us to get yours!",
+        keywords: "Hair, Salon, Barber"
+    }
+    res.render('barber-hair-salon', { metatags: res.locals.metaTags })
 }
 exports.success = function (req, res) {
     res.locals.metaTags = {
@@ -143,7 +151,7 @@ exports.success = function (req, res) {
         description: "Your order & payment has been received successfully. We'll be in tourch with you shortly.",
         keywords: "order, payment"
     }
-    res.render('success-payment', {metatags: res.locals.metaTags})
+    res.render('success-payment', { metatags: res.locals.metaTags })
 }
 exports.cancel = function (req, res) {
     res.locals.metaTags = {
@@ -151,7 +159,7 @@ exports.cancel = function (req, res) {
         description: "Your order has been cancelled and your account has not been charged.",
         keywords: "cancel, order"
     }
-    res.render('cancel-payment', {metatags: res.locals.metaTags})
+    res.render('cancel-payment', { metatags: res.locals.metaTags })
 }
 exports.privacy = function (req, res) {
     res.locals.metaTags = {
@@ -159,7 +167,7 @@ exports.privacy = function (req, res) {
         description: "Privacy policy for our website Shihabiiuc.Com. This page describes which information we collect and how we use it.",
         keywords: "privacy policy"
     }
-    res.render('privacy-policy', {metatags: res.locals.metaTags})
+    res.render('privacy-policy', { metatags: res.locals.metaTags })
 }
 exports.refund = function (req, res) {
     res.locals.metaTags = {
@@ -167,7 +175,15 @@ exports.refund = function (req, res) {
         description: "Refund policy for our website design & development services.",
         keywords: "refund policy"
     }
-    res.render('refund-policy', {metatags: res.locals.metaTags})
+    res.render('refund-policy', { metatags: res.locals.metaTags })
+}
+exports.tos = function (req, res) {
+    res.locals.metaTags = {
+        title: "Terms and Conditions | Shihabiiuc",
+        description: "Terms and conditions for our website design & development services.",
+        keywords: "terms, conditions"
+    }
+    res.render('tos', { metatags: res.locals.metaTags })
 }
 exports.subscribe = function (req, res) {
     res.locals.metaTags = {
@@ -175,7 +191,7 @@ exports.subscribe = function (req, res) {
         description: "Get our web design news, update, coupons, new services, our forum & blog articles, tutorials.",
         keywords: "newsletter, web design"
     }
-    res.render('subscribe', {metatags: res.locals.metaTags})
+    res.render('subscribe', { metatags: res.locals.metaTags })
 }
 exports.thankyou = function (req, res) {
     res.render('thank-you')
@@ -199,7 +215,7 @@ exports.profilePostScreen = function (req, res) {
             profileAvatar: req.profileUser.avatar,
             isFollowing: req.isFolloing,
             isVisitorsProfile: req.isVisitorsProfile,
-            counts: {postCount: req.postCount, followerCount: req.followerCount, followingCount: req.followingCount}
+            counts: { postCount: req.postCount, followerCount: req.followerCount, followingCount: req.followingCount }
         })
     }).catch(function () {
         res.render('404')
@@ -216,7 +232,7 @@ exports.profileFollowersScreen = async function (req, res) {
             profileAvatar: req.profileUser.avatar,
             isFollowing: req.isFolloing,
             isVisitorsProfile: req.isVisitorsProfile,
-            counts: {postCount: req.postCount, followerCount: req.followerCount, followingCount: req.followingCount}
+            counts: { postCount: req.postCount, followerCount: req.followerCount, followingCount: req.followingCount }
         })
     } catch {
         res.render('404')
@@ -232,7 +248,7 @@ exports.profileFollowingScreen = async function (req, res) {
             profileAvatar: req.profileUser.avatar,
             isFollowing: req.isFolloing,
             isVisitorsProfile: req.isVisitorsProfile,
-            counts: {postCount: req.postCount, followerCount: req.followerCount, followingCount: req.followingCount}
+            counts: { postCount: req.postCount, followerCount: req.followerCount, followingCount: req.followingCount }
         })
     } catch {
         res.render('404')

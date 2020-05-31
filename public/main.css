@@ -552,3 +552,25 @@ footer .payment-info img {
   margin: 0 auto;
   min-height: 120px;
 }
+/* SALON */
+#salon {
+  background:linear-gradient(0deg, rgba(9,14,35,0.91), rgba(211, 44, 21, .91)), url('/hair-salon-website-design-banner--mobile-min.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media(min-width: 768px) {
+  #salon {
+    background:linear-gradient(0deg, rgba(9,14,35,0.91), rgba(211, 44, 21, .91)), url('/hair-salon-website-design-banner--desktop-min.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+#salon .display-4{
+  color: #E0E0E0;
+  text-decoration: underline;
+}
+#salon .lead{
+  color: #FFFFFF;
+}
