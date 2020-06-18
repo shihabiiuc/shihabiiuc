@@ -1,43 +1,46 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78352058-6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-78352058-6');
   </script>
 
-<!--  Facebook Pixel-->
+  <!--  Facebook Pixel-->
   <!-- Facebook Pixel Code -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '2732234897000531');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-                 src="https://www.facebook.com/tr?id=2732234897000531&ev=PageView&noscript=1"
-    /></noscript>
+      src="https://www.facebook.com/tr?id=2732234897000531&ev=PageView&noscript=1" /></noscript>
   <!-- End Facebook Pixel Code -->
-<!--  Pixel end-->
+  <!--  Pixel end-->
 
   <meta charset="UTF-8">
   <% var metatags %>
   <title>
     <% if (metatags === undefined) { %>
-      <%= "Web Developer for your business: Nodejs, php, WordPress, JavaScript | Shihabiiuc" %>
+    <%= "Web Developer for your business: Nodejs, php, WordPress, JavaScript | Shihabiiuc" %>
     <% } else { %>
-      <%= metatags.title %>
+    <%= metatags.title %>
     <% } %>
   </title>
   <meta name="description" content="<% if (metatags === undefined) { %>
@@ -57,24 +60,32 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@shihabiiuc">
   <meta name="twitter:creator" content="@shihabiiuc">
-  <meta name="twitter:title" content="Web Development for Your Business: Nodejs, Express, JavaScript, MongoDB; PHP, WordPress">
-  <meta name="twitter:description" content="Providing web design & development service around the globe since 2016, created large number of websites for clients which helped business owners to boost their reputations, getting more sales & conversion. No one was regretted hiring me!">
+  <meta name="twitter:title"
+    content="Web Development for Your Business: Nodejs, Express, JavaScript, MongoDB; PHP, WordPress">
+  <meta name="twitter:description"
+    content="Providing web design & development service around the globe since 2016, created large number of websites for clients which helped business owners to boost their reputations, getting more sales & conversion. No one was regretted hiring me!">
   <meta name="twitter:image" content="https://www.shihabiiuc.com/twitter-card.jpg">
   <!-- Twitter Card End -->
   <!-- Linkedin Card -->
-  <meta property='og:title' content="Web Development for Your Business: Nodejs, Express, JavaScript, MongoDB; PHP, WordPress"/>
-  <meta property='og:image' content="https://www.shihabiiuc.com/linkedin-card.jpg"/>
+  <meta property='og:title'
+    content="Web Development for Your Business: Nodejs, Express, JavaScript, MongoDB; PHP, WordPress" />
+  <meta property='og:image' content="https://www.shihabiiuc.com/linkedin-card.jpg" />
   <meta property="og:type" content="website" /><!--  og:type is only for Facebook-->
-  <meta property='og:description' content="Providing web design & development service around the globe since 2016, created large number of websites for clients which helped business owners to boost their reputations, getting more sales & conversion. No one was regretted hiring me!"/>
+  <meta property='og:description'
+    content="Providing web design & development service around the globe since 2016, created large number of websites for clients which helped business owners to boost their reputations, getting more sales & conversion. No one was regretted hiring me!" />
   <meta property='og:url' content="https://www.shihabiiuc.com/" />
   <!-- Linkedin Card End -->
 
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+    integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/main.css">
   <meta name="google-site-verification" content="uYpe2fhnK8K3ZtfivJA2_QdpeWys0wJ2bqnjZtS8Dig" />
 </head>
+
 <body>
   <header class="header-bar">
     <div class="container d-flex flex-column flex-md-row align-items-center p-3">
@@ -94,31 +105,36 @@
         </li>
       </ul>
       <% if(user) { %>
-        <div class="flex-row my-3 my-md-0">
+      <div class="flex-row my-3 my-md-0">
 
-          <a href="#" class="text-white mr-2 header-search-icon" title="Search" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-search"></i></a>
-          <!--<span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment"></i></span>
+        <a href="#" class="text-white mr-2 header-search-icon" title="Search" data-toggle="tooltip"
+          data-placement="bottom"><i class="fas fa-search"></i></a>
+        <!--<span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment"></i></span>
           -->
-          <a href="/profile/<%= user.username %>" class="mr-2"><img title="My Profile" data-toggle="tooltip" data-placement="bottom" style="width: 32px; height: 32px; border-radius: 16px;" src="<%= user.avatar %>"></a>
-          <a class="btn btn-sm btn-danger mr-2" href="/create-post">Create Post</a>
-          <form action="/logout" method="POST" class="d-inline">
-            <button class="btn btn-sm btn-secondary">Logout</button>
-          </form>
-        </div> 
-      <% } else { %>
-        <form action="/login" method="POST" class="mb-0 pt-2 pt-md-0">
-          <div class="row align-items-center">
-            <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-              <input name="username" class="form-control form-control-sm input-dark" type="text" placeholder="Username" autocomplete="off">
-            </div>
-            <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-              <input name="password" class="form-control form-control-sm input-dark" type="password" placeholder="Password">
-            </div>
-            <div class="col-md-auto">
-              <button class="btn btn-primary btn-sm">Login</button>
-            </div>
-          </div>
+        <a href="/profile/<%= user.username %>" class="mr-2"><img title="My Profile" data-toggle="tooltip"
+            data-placement="bottom" style="width: 32px; height: 32px; border-radius: 16px;"
+            src="<%= user.avatar %>"></a>
+        <a class="btn btn-sm btn-danger mr-2" href="/create-post">Create Post</a>
+        <form action="/logout" method="POST" class="d-inline">
+          <button class="btn btn-sm btn-secondary">Logout</button>
         </form>
+      </div>
+      <% } else { %>
+      <form action="/login" method="POST" class="mb-0 pt-2 pt-md-0">
+        <div class="row align-items-center">
+          <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
+            <input name="username" class="form-control form-control-sm input-dark" type="text" placeholder="Username"
+              autocomplete="off">
+          </div>
+          <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
+            <input name="password" class="form-control form-control-sm input-dark" type="password"
+              placeholder="Password">
+          </div>
+          <div class="col-md-auto">
+            <button class="btn btn-primary btn-sm">Login</button>
+          </div>
+        </div>
+      </form>
       <% } %>
 
     </div>
