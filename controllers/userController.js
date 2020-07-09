@@ -196,6 +196,14 @@ exports.subscribe = function (req, res) {
 exports.thankyou = function (req, res) {
     res.render('thank-you')
 }
+exports.resource = function (req, res) {
+    res.locals.metaTags = {
+        title: "Web development resource, questionnaire, forms & much more",
+        description: "Your upcoming website will be solution to a problem. In order to design & develop a successful website, I really need to know the answers of  few questions. It’s a necessary evil but it’ll help me to ensure your return of investment in the web development project.",
+        keywords: "web development questionnaire"
+    }
+    res.render('resource')
+}
 
 exports.ifUserExists = function (req, res, next) {
     User.findByUsername(req.params.username).then(function (userDocument) {
