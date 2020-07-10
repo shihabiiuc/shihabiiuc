@@ -58,5 +58,15 @@
     <loc>https://www.shihabiiuc.com/terms-and-conditions</loc>
     <lastmod>2020-05-31T20:18:30+00:00</lastmod>
     <priority>0.80</priority>
-  </url>  
+  </url> 
+  <url>
+    <loc>https://www.shihabiiuc.com/web-development-resource-questionnaire-form</loc>
+    <lastmod>2020-07-09T20:18:30+00:00</lastmod>
+    <priority>0.80</priority>
+  </url> 
+  <url>
+    <loc>https://www.shihabiiuc.com/rate-experience-after-orders-are-automatically-completed-on-fiverr</loc>
+    <lastmod>2020-07-10T20:18:30+00:00</lastmod>
+    <priority>0.80</priority>
+  </url> 
 </urlset>

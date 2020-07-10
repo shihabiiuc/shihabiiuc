@@ -16,6 +16,9 @@ img {
 .jumbotron span {
   max-width: 1000px;
 }
+.text-800{
+  max-width: 800px; display: block;
+}
 .bg-offer {
   background-color: #c4251e;
   background-image: url(labour-day-min.png);

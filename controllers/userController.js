@@ -202,7 +202,16 @@ exports.resource = function (req, res) {
         description: "Your upcoming website will be solution to a problem. In order to design & develop a successful website, I really need to know the answers of  few questions. It’s a necessary evil but it’ll help me to ensure your return of investment in the web development project.",
         keywords: "web development questionnaire"
     }
-    res.render('resource')
+    res.render('resource', { metatags: res.locals.metaTags })
+}
+
+exports.fiverr_feedback = function (req, res) {
+    res.locals.metaTags = {
+        title: "How to leave feedback or ratings after order has been completed automatically on Fiverr and send tip or bonus to seller",
+        description: "Your orders are automatically completed after 72 hours of delivery, but still you have chance to leave feedback or ratings to seller and even you can send tips or bonus to seller.",
+        keywords: "feedback, ratings, fiverr, bonus, tip"
+    }
+    res.render('fiverr-feedback', { metatags: res.locals.metaTags })
 }
 
 exports.ifUserExists = function (req, res, next) {
