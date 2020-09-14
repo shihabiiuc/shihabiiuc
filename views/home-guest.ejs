@@ -2,15 +2,19 @@
 
 <div class="container py-md-5">
 
-    <%- include('includes/flash') %>
+  <%- include('includes/flash') %>
 
   <div class="row align-items-center">
     <div class="col-lg-7 py-3 py-md-5">
       <h1 class="display-3 font-weight-bold">Web development for your business</h1>
-      <p class="lead text-muted">Providing web design &amp; development service around the globe since 2016, created large number of websites for clients which helped business owners to boost their reputations, getting more sales &amp; conversion. No one was regretted hiring me!</p>
-      <p>Cutting edge technologies will be used for developing your website, it&apos;s mobile responsive, speed optimized, highly secured, spam protected, professional look, easy to navigate. Definitely it&apos;ll serve your purpose.</p>
+      <p class="lead text-muted">Providing web design &amp; development service around the globe since 2016, created
+        large number of websites for clients which helped business owners to boost their reputations, getting more sales
+        &amp; conversion. No one was regretted hiring me!</p>
+      <p>Cutting edge technologies will be used for developing your website, it&apos;s mobile responsive, speed
+        optimized, highly secured, spam protected, professional look, easy to navigate. Definitely it&apos;ll serve your
+        purpose.</p>
 
-        <a class="btn btn-outline-primary btn-sm" href="/pricing">Get Started</a>
+      <a class="btn btn-outline-primary btn-sm" href="/pricing">Get Started</a>
 
 
     </div>
@@ -18,29 +22,87 @@
       <form action="/register" method="POST" id="registration-form">
 
         <% regErrors.forEach(function(message) { %>
-          <div class="alert alert-danger text-center"><%= message %></div>
+        <div class="alert alert-danger text-center"><%= message %></div>
         <% }) %>
 
-          <div class="form-group">
-            <label for="username-register" class="text-muted mb-1"><small>Username</small></label>
-            <input name="username" id="username-register" class="form-control" type="text" placeholder="Choose unique username" autocomplete="off">
+        <div class="form-group">
+          <label for="username-register" class="text-muted mb-1"><small>Username</small></label>
+          <input name="username" id="username-register" class="form-control" type="text"
+            placeholder="Choose unique username" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label for="email-register" class="text-muted mb-1"><small>Email</small></label>
+          <input name="email" id="email-register" class="form-control" type="text" placeholder="Enter valid email"
+            autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label for="password-register" class="text-muted mb-1"><small>Password</small></label>
+          <input name="password" id="password-register" class="form-control" type="password"
+            placeholder="Choose secure password">
+        </div>
+
+        <button type="submit" class="py-3 mt-4 btn btn-lg btn-success btn-block">Register an Account</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="bg-light-shape py-5 service_section_homepage">
+  <div class="container align-items-center">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="display-5 font-weight-bold">What I Can Do -My Solution &amp; Servic<span
+            style="text-decoration: underline;">e</span></h3>
+        <p class="text-800">Of course I&apos;m not guru on everything. I&apos;ve a professional team who
+          works on content
+          creation in various niche and SEO.</p>
+      </div>
+      <div class="col-lg-4 d-flex">
+        <div class="card text-white bg-primary mb-3">
+          <div class="card-header"><img src="icons/code.svg" alt="web design, development"> Web Design &amp;
+            Development
           </div>
-          
-          <div class="form-group">
-            <label for="email-register" class="text-muted mb-1"><small>Email</small></label>
-            <input name="email" id="email-register" class="form-control" type="text" placeholder="Enter valid email" autocomplete="off">
+          <div class="card-body">
+
+            <p class="card-text">This is the thing I handle myself and started my career with this website design &amp;
+              development service. I create website based on content &amp; your business niche. I develop custom
+              web-functionalites depending on your unique need &amp; based on my capabilities. As of September 2020,
+              already built more than one hundred <span style="text-decoration: underline;">successfull</span> websites.
+            </p>
           </div>
-          
-          <div class="form-group">
-            <label for="password-register" class="text-muted mb-1"><small>Password</small></label>
-            <input name="password" id="password-register" class="form-control" type="password" placeholder="Choose secure password">
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex">
+        <div class="card text-white bg-success mb-3">
+          <div class="card-header"><img src="icons/ink.svg" alt="website content writing"> Content Writing</div>
+          <div class="card-body">
+            <p class="card-text">I don&apos;t use placeholder text while designing &amp; developing a website. This is
+              just because of the success of your business &amp; success of your website. I will create the look &amp;
+              feel of your website based on your business niche &amp; based on the content. Publishing a website with
+              dummy/placeholder text is a nightmare and this is the first big mistake made by many of the website
+              owners. If you don&apos;t have the text content for your website, my professional<span
+                class="text-warning bg-dark"> team </span> will do it for you.
+            </p>
           </div>
-          
-          <button type="submit" class="py-3 mt-4 btn btn-lg btn-success btn-block">Register an Account</button>
-          
-        </form>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex">
+        <div class="card text-white bg-info mb-3">
+          <div class="card-header"><img src="icons/search.svg" alt="website content writing"> SEO</div>
+          <div class="card-body">
+
+            <p class="card-text">This is the final step I&sol;we do before delivering a website. Finding your business
+              or your website in Google was never easier. From content creation to sitemap submission, we do all the
+              heavy lifting for you. And of course it&apos;s not one time process and you have to keep maintaining the
+              website on a regular basis to get most out of it.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <%- include('includes/footer') %>
+<%- include('includes/footer') %>

@@ -19,6 +19,13 @@ img {
 .text-800{
   max-width: 800px; display: block;
 }
+.bg-light-shape{
+  background-color: #dedede;
+  background-image: url(icons/home-page-service-bg-shape.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .bg-offer {
   background-color: #c4251e;
   background-image: url(labour-day-min.png);
@@ -576,4 +583,10 @@ footer .payment-info img {
 }
 #salon .lead{
   color: #FFFFFF;
+}
+/**
+* Home page
+*/
+.service_section_homepage img{
+  max-width: 30px; height: auto;
 }
