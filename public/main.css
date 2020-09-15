@@ -21,8 +21,8 @@ img {
 }
 .bg-light-shape{
   background-color: #dedede;
-  background-image: url(icons/home-page-service-bg-shape.svg);
-  background-position: center;
+  background-image: url(icons/check.svg);
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -551,6 +551,15 @@ footer .payment-info img {
 /*
 * PRICING
 */
+.package p.card-text{
+  min-height: 50px;
+}
+@media (min-width: 767px) {
+  .package p.card-text{
+    min-height: 100px;
+  }
+}
+
 #carouselExampleIndicators {
   padding: 2rem 1rem;
 
