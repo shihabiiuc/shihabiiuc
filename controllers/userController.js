@@ -145,6 +145,14 @@ exports.salon = function (req, res) {
     }
     res.render('barber-hair-salon', { metatags: res.locals.metaTags })
 }
+exports.cleaning_company = function (req, res) {
+    res.locals.metaTags = {
+        title: "Website designer and web developer for your cleaning company.",
+        description: "Build a responsive and search engine optimized website for your cleaning company and get more clients for your cleaning business.",
+        keywords: "web designer, web developer, website designer, cleaning company website"
+    }
+    res.render('cleaning-company', { metatags: res.locals.metaTags })
+}
 exports.success = function (req, res) {
     res.locals.metaTags = {
         title: "Order Received & Payment Received Successfully! -Shihabiiuc",
