@@ -90,9 +90,35 @@
 </head>
 
 <body>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v8.0'
+      });
+    };
+
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="111105197418733"
+theme_color="#292929"
+logged_in_greeting="Hi! How can I help with your website?"
+logged_out_greeting="Hi! How can I help with your website?">
+  </div>
   <header class="header-bar">
     <div class="container d-flex flex-column flex-md-row align-items-center p-3">
-      <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="text-white">shihabiiuc</a></h4>
+      <a href="/" class="shihabiiuc-logo"><img src="../shihabiiuc-logo.svg" alt="logo"></a>
       <ul class="nav mr-md-auto general-pages">
         <li class="nav-item">
           <a class="nav-link text-muted" href="/about">About</a>
@@ -100,12 +126,14 @@
         <li class="nav-item">
           <a class="nav-link text-muted" href="/portfolio">Portfolio</a>
         </li>
+<!--
         <li class="nav-item">
           <a class="nav-link text-muted" href="/pricing">Pricing</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-muted" href="/contact">Contact</a>
         </li>
+      -->
       </ul>
       <% if(user) { %>
       <div class="flex-row my-3 my-md-0">

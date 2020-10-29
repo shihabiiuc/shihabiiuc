@@ -488,6 +488,9 @@ textarea.tall-textarea {
 }
 
 /* Header/menu/navigation/pages-link */
+.shihabiiuc-logo img{
+  max-width: 190px; height: auto;
+}
 .general-pages li a {
   font-size: 12px;
 }
@@ -596,6 +599,7 @@ footer .payment-info img {
 /**
 * Home page
 */
+
 .service_section_homepage img{
   max-width: 30px; height: auto;
 }
