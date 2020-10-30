@@ -112,11 +112,11 @@
   <div class="fb-customerchat"
     attribution=setup_tool
     page_id="111105197418733"
-theme_color="#292929"
-logged_in_greeting="Hi! How can I help with your website?"
-logged_out_greeting="Hi! How can I help with your website?">
+    theme_color="#292929"
+    logged_in_greeting="Hi! How can I help with your website?"
+    logged_out_greeting="Hi! How can I help with your website?">
   </div>
-  
+
   <header class="header-bar">
     <div class="container d-flex flex-column flex-md-row align-items-center p-3">
       <a href="/" class="shihabiiuc-logo"><img src="../shihabiiuc-logo.svg" alt="logo"></a>
@@ -136,38 +136,8 @@ logged_out_greeting="Hi! How can I help with your website?">
         </li>
       -->
       </ul>
-      <% if(user) { %>
-      <div class="flex-row my-3 my-md-0">
 
-        <a href="#" class="text-white mr-2 header-search-icon" title="Search" data-toggle="tooltip"
-          data-placement="bottom"><i class="fas fa-search"></i></a>
-        <!--<span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment"></i></span>
-          -->
-        <a href="/profile/<%= user.username %>" class="mr-2"><img title="My Profile" data-toggle="tooltip"
-            data-placement="bottom" style="width: 32px; height: 32px; border-radius: 16px;"
-            src="<%= user.avatar %>"></a>
-        <a class="btn btn-sm btn-danger mr-2" href="/create-post">Create Post</a>
-        <form action="/logout" method="POST" class="d-inline">
-          <button class="btn btn-sm btn-secondary">Logout</button>
-        </form>
-      </div>
-      <% } else { %>
-      <form action="/login" method="POST" class="mb-0 pt-2 pt-md-0">
-        <div class="row align-items-center">
-          <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-            <input name="username" class="form-control form-control-sm input-dark" type="text" placeholder="Username"
-              autocomplete="off">
-          </div>
-          <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-            <input name="password" class="form-control form-control-sm input-dark" type="password"
-              placeholder="Password">
-          </div>
-          <div class="col-md-auto">
-            <button class="btn btn-primary btn-sm">Login</button>
-          </div>
-        </div>
-      </form>
-      <% } %>
+      <!-- removed login code from here -->
 
     </div>
   </header>
