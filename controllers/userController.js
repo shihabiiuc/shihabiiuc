@@ -145,6 +145,14 @@ exports.salon = function (req, res) {
     }
     res.render('barber-hair-salon', { metatags: res.locals.metaTags })
 }
+exports.offer_otp = function (req, res) {
+    res.locals.metaTags = {
+        title: "Special one time price offer for web development",
+        description: "WordPress website design and development including domain and hosting",
+        keywords: "web development, wordpress website, domain, hosting"
+    }
+    res.render('offer-web-design', { metatags: res.locals.metaTags })
+}
 exports.cleaning_company = function (req, res) {
     res.locals.metaTags = {
         title: "Website designer and web developer for your cleaning company.",
