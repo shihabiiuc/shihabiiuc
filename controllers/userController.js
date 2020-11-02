@@ -153,6 +153,14 @@ exports.offer_otp = function (req, res) {
     }
     res.render('offer-web-design', { metatags: res.locals.metaTags })
 }
+exports.offer_elementor = function (req, res) {
+    res.locals.metaTags = {
+        title: "Website Design with Elementor PRO License",
+        description: "Starter website design with Elementor PRO license. One time cost and reduced price.",
+        keywords: "Elementor PRO license"
+    }
+    res.render('offer-elementor-pro', { metatags: res.locals.metaTags })
+}
 exports.cleaning_company = function (req, res) {
     res.locals.metaTags = {
         title: "Website designer and web developer for your cleaning company.",
