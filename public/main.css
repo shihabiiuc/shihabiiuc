@@ -1,7 +1,38 @@
 body,
 .tooltip {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Volkhov', serif;
+}
+h2{
+  font-size: 1.5rem;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-transform: capitalize;
+}
+@media (min-width: 768px) { h2{font-size: 2.5rem;} }
+
+h3{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+@media (min-width: 768px) { h3{font-size: 2rem;} }
+
+p{font-size: 1.2rem;}
+
+.text-highlight{color: #ff711a;}
+.text-gradient{
+  background: -webkit-linear-gradient(#FF2252, #FFA000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-alt{
+  background: -webkit-linear-gradient(#FFA000, #FF2252);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 img {
   max-width: 100%;
 }
@@ -25,6 +56,7 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: block; overflow: hidden;
 }
 .bg-offer {
   background-color: #c4251e;
@@ -488,6 +520,10 @@ textarea.tall-textarea {
 }
 
 /* Header/menu/navigation/pages-link */
+#content{
+  content: ""; display: block; overflow: hidden;
+}
+
 .shihabiiuc-logo img{
   max-width: 190px; height: auto;
 }
@@ -498,6 +534,158 @@ textarea.tall-textarea {
   .general-pages li a {
     font-size: 22px;
   }
+}
+
+/* TOP MENU */
+
+.navbar {
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  font-size: 12.5px;
+  letter-spacing: 1.5px;
+  
+  padding:25px 0;
+    -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  -ms-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  -o-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+padding-right: 1.1em;
+padding-left: 1.1em;
+}
+.navbar-brand {
+margin-right: 3em;
+padding-top: 0px;
+}
+.bg-light {
+background-color: rgba(255, 255, 255, 0.7)!important;
+}
+.navbar-light .navbar-nav .nav-link {
+color: rgba(0, 0, 0, 0.8);
+}
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+color:#e0413d
+}
+
+.shrink.navbar {
+padding:13px 0;
+background-color: rgba(255, 255, 255, 0.9)!important;
+/*-webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+-ms-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+-o-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+box-shadow: 0px 0px 15px rgba(0,0,0,0.1);*/
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.dropdown-menu.fade {
+display: block;
+opacity: 0;
+pointer-events: none;
+}
+
+.show > .dropdown-menu.fade {
+pointer-events: auto;
+opacity: 1;
+}
+@media (min-width: 991px) {
+.shrink.navbar::after {
+  border-radius: 50%;
+  bottom: 1%;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  content: '';
+  height: 10%;
+  left: 2%;
+  position: absolute;
+  width: 96%;
+  z-index: 1;
+  bottom: -1px;
+  
+}
+
+.dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+border:1px solid #eeeeee;
+border-top: 2px solid #eb672e;
+max-height: 0;
+display: block;
+opacity: 0;
+  -webkit-box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+  -ms-box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+  -o-box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+  border-radius: 0 0 .25rem .25rem;
+  position: relative;
+}
+
+.dropdown:hover>.dropdown-menu {
+  max-height: 500px;
+    opacity: 1;
+}
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top:-6px;
+    left:10%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #eb672e;
+    z-index: 100;
+}
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+z-index:9999;
+left:20px;
+top:45px;
+font-size: 14px;
+}
+.dropdown-item {
+padding: .5rem 1rem;
+border-bottom: 1px solid #eeeeee
+}
+.dropdown-item:last-of-type {
+border-bottom: none;
+border-radius: 0 0 .25rem .25rem
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+background-image: -webkit-gradient(
+    linear,
+    left top, right top,
+    from(hsl(23, 100%, 55%)),
+    to(hsl(1, 72%, 56%))
+  );
+background-image: -webkit-linear-gradient(
+    left,
+    hsl(23, 100%, 55%),
+    hsl(1, 72%, 56%)
+  );
+background-image: -o-linear-gradient(
+    left,
+    hsl(23, 100%, 55%),
+    hsl(1, 72%, 56%)
+  );
+background-image: linear-gradient(
+    to right,
+    hsl(23, 100%, 55%),
+    hsl(1, 72%, 56%)
+  );
+  color:#fff;
+}
+.dropdown-menu {
+padding:0px
 }
 
 /*
@@ -599,7 +787,487 @@ footer .payment-info img {
 /**
 * Home page
 */
-
-.service_section_homepage img{
-  max-width: 30px; height: auto;
+#shihabiiuc_homebanner.jumbotron{
+  background-color: #182860;
+  text-align: center;
 }
+#shihabiiuc_homebanner h1{
+  color: #FFFFFF;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  #shihabiiuc_homebanner h1 {font-size: 5rem;}
+}
+
+#shihabiiuc_homebanner .fa-star {
+  color: #ff711a;
+}
+#shihabiiuc_homebanner p .completed_order_summery{
+  color: #FFFFFF; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.service_section_homepage{
+  padding: 90px 15px;
+}
+
+.service_section_homepage .card-header{
+  font-family: 'Volkhov', serif;
+  display: inline; text-align: center;
+}
+.service_section_homepage .card-header img{
+  max-width: 40px;
+} /* service section*/
+
+.how-it-works{
+  padding:50px 10px 100px 10px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+
+.how-it-works .step.one p:after {
+  background: none;
+
+}
+@media (min-width: 992px) {
+  .how-it-works .step.one p:after {
+    background: url(../images/background/arrow-1.png) no-repeat rgba(0,0,0,0);
+    content: "";
+    height: 80px;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    left: 75%;
+    top: 85px;
+  }
+}
+.how-it-works .step.two p:after {
+  background: none;
+  
+}
+@media (min-width: 992px) {
+  .how-it-works .step.two p:after {
+    background: url(../images/background/arrow-2.png) no-repeat rgba(0,0,0,0);
+    content: "";
+  height: 80px;
+  left: 75%;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  }
+}
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.icon {
+  font-size: 30px;
+  color:#e0413d;
+  border:1px solid #cecece;
+  border-radius: 50%;
+  padding: 30px 20px 20px 20px;  
+  width: 90px;
+  height:90px;
+  margin-top: -15px;
+  position: relative;
+  margin: 0 auto;
+}
+.icon span {
+  display: block;
+  width:25px;
+  height: 25px;
+  background-color: #e0413d;
+  color:#fff;
+  font-weight: 300;
+  border-radius: 50%;
+  position: absolute;
+  left: 38%;
+  font-size: 13px;
+  top: -12px;
+}
+.step .icon::before {
+  position: absolute;
+left: 0;
+top: 0;
+bottom: 0;
+right: 0;
+content: "";
+background-color: #e0413d;
+-webkit-transform: scale(1.25);
+-ms-transform: scale(1.25);
+transform: scale(1.25);
+border-radius: 50px;
+opacity: 0;
+z-index: -1;
+transition: all .3s ease 0s;
+-webkit-transition: all .3s ease 0s;
+-o-transition: all .3s ease 0s;
+}
+.step:hover .icon {
+  color:#fff;
+  border-color: #e0413d;
+}
+.step:hover .icon::before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);  
+}
+.step h4 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 65px 0 5px 0;
+}
+.step.one h4, .step.two h4, .step.three h4 {
+  margin: 15px 0 5px 0!important;
+}
+
+.step {
+  position: relative;
+  padding-top: 50px;
+}
+.step p {
+  padding: 0 40px;
+}
+
+
+
+  /* how-it-works */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+* Preloader
+*/
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+
+  -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+  z-index: 1001;
+}
+
+  #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #e74c3c;
+
+      -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  }
+
+  #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #f9c922;
+
+      -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  }
+
+  @-webkit-keyframes spin {
+      0%   { 
+          -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(0deg);  /* IE 9 */
+          transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+      }
+      100% {
+          -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(360deg);  /* IE 9 */
+          transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+      }
+  }
+  @keyframes spin {
+      0%   { 
+          -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(0deg);  /* IE 9 */
+          transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+      }
+      100% {
+          -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(360deg);  /* IE 9 */
+          transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+      }
+  }
+
+  #loader-wrapper .loader-section {
+      position: fixed;
+      top: 0;
+      width: 51%;
+      height: 100%;
+      background: #fff;
+      z-index: 1000;
+      -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateX(0);  /* IE 9 */
+      transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+  }
+
+  #loader-wrapper .loader-section.section-left {
+      left: 0;
+  }
+
+  #loader-wrapper .loader-section.section-right {
+      right: 0;
+  }
+
+  /* Loaded */
+  .loaded #loader-wrapper .loader-section.section-left {
+      -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: translateX(-100%);  /* IE 9 */
+              transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+              -o-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+              transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  }
+
+  .loaded #loader-wrapper .loader-section.section-right {
+      -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: translateX(100%);  /* IE 9 */
+              transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+      -o-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  }
+  
+  .loaded #loader {
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-out;  
+              -o-transition: all 0.3s ease-out;  
+              transition: all 0.3s ease-out;
+  }
+  .loaded #loader-wrapper {
+      visibility: hidden;
+
+      -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: translateY(-100%);  /* IE 9 */
+              transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+      -webkit-transition: all 0.3s 1s ease-out;  
+              -o-transition: all 0.3s 1s ease-out;  
+              transition: all 0.3s 1s ease-out;
+  }
+  
+  /* JavaScript Turned Off */
+  .no-js #loader-wrapper {
+      display: none;
+  }
+  .no-js h1 {
+      color: #222222;
+  }
+
+  #content {
+      margin: 0 auto;
+      padding-bottom: 50px;
+      width: 80%;
+      max-width: 978px;
+  }  
+
+  /* back to top */
+
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #e1433c url(../icons/back-to-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+  -o-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+  transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+  z-index: 9999;
+}
+
+.cd-top.cd-top--show,
+.cd-top.cd-top--fade-out,
+.cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+  -o-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+}
+
+.cd-top.cd-top--show {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top.cd-top--fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: 1;
+}
+
+.cd-top:hover {
+  background-color: #fe701b;
+  opacity: 1;
+}
+
+/* Button gradient */
+.button {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  max-width: 400px;
+}
+@media (min-width: 768px) {
+  .button{ font-size: 24px;}
+}
+.button_center {
+  display: block;
+  margin: auto;
+}
+
+.button a {
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 16px;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+}
+.button_wide a{padding: 12px 42px;}
+@media (min-width: 768px) {
+  .button a{ padding: 20px 24px; }
+  .button_wide a{padding: 20px 78px;}
+}
+.button a:hover{
+  text-decoration: none;
+}
+
+.button.gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0413d+0,ff711a+100 */
+  background: #e0413d; /* Old browsers */ /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #e0413d 0%,#ff711a 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#e0413d),to(#ff711a));
+  background: -o-linear-gradient(left, #e0413d 0%,#ff711a 100%);
+  background: linear-gradient(to right, #e0413d 0%,#ff711a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0413d', endColorstr='#ff711a',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient {
+  position: relative;
+  min-height: 40px;
+  background-image: -webkit-gradient(
+    linear,
+    left top, right top,
+    from(hsl(211, 100%, 50%)),
+    to(hsl(179, 100%, 30%))
+  );
+  background-image: -webkit-linear-gradient(
+    left,
+    hsl(211, 100%, 50%),
+    hsl(179, 100%, 30%)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    hsl(211, 100%, 50%),
+    hsl(179, 100%, 30%)
+  );
+  background-image: linear-gradient(
+    to right,
+    hsl(211, 100%, 50%),
+    hsl(179, 100%, 30%)
+  );
+  z-index: 1;
+  border-radius: 5px;
+}
+.gradient::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top, right top,
+    from(hsl(23, 100%, 55%)),
+    to(hsl(1, 72%, 56%))
+  );
+  background-image: -webkit-linear-gradient(
+    left,
+    hsl(23, 100%, 55%),
+    hsl(1, 72%, 56%)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    hsl(23, 100%, 55%),
+    hsl(1, 72%, 56%)
+  );
+  background-image: linear-gradient(
+    to right,
+    hsl(23, 100%, 55%),
+    hsl(1, 72%, 56%)
+  );
+  z-index: -1;
+  -webkit-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+  border-radius: 5px;
+}
+.gradient:hover::before {
+  opacity: 1;
+  border-radius: 5px;
+}
+
+/* GRADIENT BUTTON ENDS*/

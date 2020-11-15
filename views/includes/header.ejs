@@ -79,6 +79,15 @@
   <meta property='og:url' content="https://www.shihabiiuc.com/" />
   <!-- Linkedin Card End -->
 
+
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+  <!-- for header menu -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@900&display=swap" rel="stylesheet">
+  <!-- for page banner headline -->
+  <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@700&display=swap" rel="stylesheet">
+  <!-- for generic heading -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- for text -->
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -117,27 +126,60 @@
     logged_out_greeting="Hi! How can I help with your website?">
   </div>
 
-  <header class="header-bar">
-    <div class="container d-flex flex-column flex-md-row align-items-center p-3">
-      <a href="/" class="shihabiiuc-logo"><img src="../shihabiiuc-logo.svg" alt="logo"></a>
-      <ul class="nav mr-md-auto general-pages">
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="/portfolio">Portfolio</a>
-        </li>
-<!--
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="/pricing">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-muted" href="/contact">Contact</a>
-        </li>
-      -->
-      </ul>
+  <header class="shihabaiiuc_header">
+    <!-- navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="header">
 
-      <!-- removed login code from here -->
+        <div class="container">
 
-    </div>
-  </header>
+            <!-- LOGO -->
+            <a class="navbar-brand shihabiiuc-logo" href="/"><img src="../shihabiiuc-logo.svg" alt="logo header"></a>
+
+            <!-- mobile menu toggle button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/web-development-resource-questionnaire-form">Resource</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Deals
+                        </a>
+                        <div class="dropdown-menu" >
+                            <a class="dropdown-item" href="aboutus.html">Deal 1</a>
+                            <a class="dropdown-item" href="blog.html">Blog</a>
+                            <a class="dropdown-item" href="single.html">Single Blog Page</a>
+                            <a class="dropdown-item" href="page-elements.html">Page Elements</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div><!-- /.collapse -->
+        </div><!-- /.container -->
+    </nav>
+
+</header>  
+<div id="content"></div>
+<!-- dynamic navigation height spacing -->

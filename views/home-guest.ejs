@@ -1,61 +1,58 @@
 <%- include('includes/header') %>
 
+<!-- PRELOADER -->
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+
+<div class="jumbotron jumbotron-fluid" id="shihabiiuc_homebanner">
+  <div class="container">
+    <h1><span class="text-gradient">W</span>eb <span class="text-gradient-alt">D</span>eveloper for Your Business</h1>
+    <p>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <span class="completed_order_summery">99&percnt; Positive Review on <span class="text-highlight">229</span> Completed Orders</span>
+  </p>
+  </div>
+</div>
+
 <div class="container py-md-5">
 
   <%- include('includes/flash') %>
 
   <div class="row align-items-center">
+
+    <h2>A bad website will cause you to <span class="text-gradient">waste money</span> on other marketing methods.</h2>
     <div class="col-lg-7 py-3 py-md-5">
-      <h1 class="display-3 font-weight-bold">Web development for your business</h1>
-      <p class="lead text-muted">There are over 1.5 billion websites around the globe but most of them actually failed. 94.3% of new websites get zero traffic. It's because they just don't have the key pieces of information inline before they get started. You can call me 'Shihab' and I'm going to give you those pieces of information and help you to create a Successful Website.
-      <p class="lead text-muted">Your website is the core of your online marketing activities but a bad website will cause you to waste money on other marketing methods. I'll ensure your ROI on the Web Design & Development project. Start a small Investment today!</p>
+      
+      <p class="lead text-muted">There are over 1.5 billion websites around the globe but most of them actually failed. 94.3% of new websites get zero traffic. It's because they just don't have the key pieces of information inline before they get started. You can call me Shihab &amp; I&apos;m team leader of a creative team. I'm going to give you those pieces of information and help you to create a <span class="text-highlight">Successful</span> Website for your business.
+      <p class="lead text-muted font-italic">Your website is the core of your online marketing activities but a bad website will cause you to waste money on other marketing methods. I'll ensure your ROI on the Web Design & Development project. Start a small Investment today!</p>
 
-
-      <a class="btn btn-outline-primary btn-sm" href="/pricing">Get Started</a>
+      <div class="button gradient">
+        <a href="/pricing">Get Started</a> 
+      </div>
 
 
     </div>
     <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
-      <form action="/register" method="POST" id="registration-form">
-
-        <% regErrors.forEach(function(message) { %>
-        <div class="alert alert-danger text-center"><%= message %></div>
-        <% }) %>
-
-        <div class="form-group">
-          <label for="username-register" class="text-muted mb-1"><small>Username</small></label>
-          <input name="username" id="username-register" class="form-control" type="text"
-            placeholder="Choose unique username" autocomplete="off">
-        </div>
-
-        <div class="form-group">
-          <label for="email-register" class="text-muted mb-1"><small>Email</small></label>
-          <input name="email" id="email-register" class="form-control" type="text" placeholder="Enter valid email"
-            autocomplete="off">
-        </div>
-
-        <div class="form-group">
-          <label for="password-register" class="text-muted mb-1"><small>Password</small></label>
-          <input name="password" id="password-register" class="form-control" type="password"
-            placeholder="Choose secure password">
-        </div>
-
-        <button type="submit" class="py-3 mt-4 btn btn-lg btn-success btn-block">Register an Account</button>
-
-      </form>
+      <img src="../images/home_page/Shihab.jpg" alt="Shihab, Web Developer" class="img-thumbnail">
+      <figcaption class="figure-caption text-center">Shihab, Web Developer, Team Leader at Shihabiiuc</figcaption>
     </div>
   </div>
 </div>
 
-<section class="bg-light-shape py-5 service_section_homepage">
+<section class="bg-light-shape service_section_homepage">
   <div class="container align-items-center">
     <div class="row">
       <div class="col-12">
-        <h3 class="display-5 pt-5 font-weight-bold">What I Can Do -My Solution &amp; Servic<span
+        <h3>What I can do -My solution &amp; servic<span
             style="text-decoration: underline;">e</span></h3>
-        <p class="text-800">Of course I&apos;m not guru on everything. I&apos;ve a professional team who
-          works on content
-          creation in various niche and SEO.</p>
+        <p class="text-800">Of course I&apos;m not guru on everything. I&apos;ve a professional team who works on content contention, graphic designing, Marketing and SEO. I work as a Full Stack Developer myself and other fellow web designers & developers also work in my creative team.</p>
       </div>
       <div class="col-lg-4 d-flex">
         <div class="card text-white bg-primary mb-3">
@@ -92,8 +89,8 @@
           <div class="card-body">
 
             <p class="card-text">This is the final step I&sol;we do before delivering a website. Finding your business
-              or your website in Google was never easier. From content creation to sitemap submission, we do all the
-              heavy lifting for you. And of course it&apos;s not one time process and you have to keep maintaining the
+              or your website in Google was never been easy. Same thing is also true for other major search engines. From content creation to sitemap submission, we do all the
+              heavy lifting for you. And of course it&apos;s not one time process and you will not get the result immediately. But your website will be more findable in search gradually. Also you have to keep maintaining the
               website on a regular basis to get most out of it.</p>
           </div>
         </div>
@@ -101,5 +98,58 @@
     </div>
   </div>
 </section>
+
+   <!-- HOW IT WORKS -->
+   <section class="how-it-works">
+    <div class="container">
+        <h3 class="display-5 pt-5"><span class="text-gradient">Three easy steps</span> to get up &amp; running quickly with your business website.</h3>
+        <p class="section-description">During the last five years of web developing experience I noticed that I&apos;ve to ask many <span class="text-highlight">similar questions</span> to most of my clients; over &amp; over! It&apos;s not a bad thing but it&apos;s time consuming both for us. Lack of availability, time zone difference, not able to think&sol;answer properly upfront,.. the list goes on. So I created a super <span class="text-highlight">valueable questionnaire</span> for future clients. Once you place a web designing &amp; developing <span class="text-highlight">order</span>, I&apos;ll send you the <span class="text-highlight">questionnaire</span> &amp; it contains <span class="text-highlight">22 questions</span>. All you have to do is- write down your answers in a word document &amp; <span class="text-highlight">send it back</span> to me. THAT&apos;S IT!
+          
+        </p>
+        
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="step one">
+                    <div class="icon">
+                        <span>1</span>
+                        <i class="fas fa-money-check"></i>
+                    </div><!-- /.icon-->
+                    <h4>Make the Payment</h4>
+                    <p>The first step is to make the payment for any specific web development package&sol;custom-offer.</p>
+                </div><!-- /.step -->
+            </div><!-- /.col-4 -->
+
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="step two">
+                    <div class="icon">
+                        <span>2</span>
+                        <i class="fas fa-edit"></i>
+                    </div><!-- /.icon-->
+                    <h4>Answer to Questions</h4>
+                    <p>Once you place the order, I will send you a questionnaire with 22 questions. And you have to send me back the answer in a word document.</p>
+                </div><!-- /.step -->
+            </div><!-- /.col-4 -->
+
+
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="step three">
+                    <div class="icon">
+                        <span>3</span>
+                        <i class="fas fa-globe"></i>
+                    </div><!-- /.icon-->
+                    <h4>Get Your Website</h4>
+                    <p>Depending on your answer &amp; your unique requirement, we will start working on your order. We generally deliver a website in a week.</p>
+                </div><!-- /.step -->
+            </div><!-- /.col-4 -->
+
+            <div class="button button_center button_wide mt-5 gradient">
+              <a href="/pricing">Packages</a> 
+            </div>
+
+        </div><!-- /.row -->
+
+    </div><!-- /.container -->
+    
+</section><!-- /.how-it-works -->
 
 <%- include('includes/footer') %>
