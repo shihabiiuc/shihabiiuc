@@ -12,10 +12,6 @@ router.get('/portfolio', userController.portfolio)
 router.get('/pricing', userController.pricing)
 router.get('/contact', userController.contact)
 router.get('/frequently-asked-questions', userController.faq)
-router.get('/barber-hair-salon-website', userController.salon)
-router.get('/special-one-time-price-for-web-development', userController.offer_otp)
-router.get('/elementor-pro-license-starter-website-design', userController.offer_elementor)
-router.get('/website-development-for-cleaning-company', userController.cleaning_company)
 router.get('/success', userController.success)
 router.get('/cancel', userController.cancel)
 router.get('/privacy-policy', userController.privacy)
@@ -31,6 +27,10 @@ router.post('/logout', userController.logout)
 
 // Offer related routes
 router.get('/quality-web-development-with-affordable-price', userController.showOfferPage)
+router.get('/barber-hair-salon-website', userController.salon)
+router.get('/special-one-time-price-for-web-development', userController.offer_otp)
+router.get('/elementor-pro-license-starter-website-design', userController.offer_elementor)
+router.get('/website-development-for-cleaning-company', userController.cleaning_company)
 
 // Profile related routes
 router.get('/profile/:username', userController.ifUserExists, userController.sharedProfileData, userController.profilePostScreen)
