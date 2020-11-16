@@ -108,3 +108,8 @@ $(`.nav-link[href="${location.pathname}"]`).parent().addClass("active");
 
 
 }); // END OF DOCUMENT.READY
+
+
+// Lozad -lazy load
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();

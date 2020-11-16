@@ -886,6 +886,18 @@ footer .payment-info img {
   width: 100px;
   height: auto;
 }
+.payment_option .payment_option_text{
+  font-size: .8rem; letter-spacing: 1.2px;
+}
+.border-bottom-gradient {
+  font-weight: 700;
+  border-width: 0 0 2px 0;
+  border-image: linear-gradient(45deg, rgb(255, 0, 0) 0%, rgb(255, 165, 0) 100%);
+  border-image-slice: 9;
+  border-style: solid;
+
+    
+}
 
 /*
  * FAQ
@@ -995,9 +1007,7 @@ footer .payment-info img {
   .service_section_homepage .service_container_before{
     background-size: 500px 200px;
   }
-}
-
-/* service section*/
+}/* service section*/
 
 .how-it-works{
   padding:50px 10px 100px 10px;
@@ -1005,8 +1015,6 @@ footer .payment-info img {
   position: relative;
   z-index: 2;
 }
-
-
 .how-it-works .step.one p:after {
   background: none;
 
@@ -1112,13 +1120,16 @@ transition: all .3s ease 0s;
 }
 .step p {
   padding: 0 40px;
+} /* how-it-works ends*/
+
+.roi_guarantee{
+  background: #333842;
+  padding: 90px 15px;
 }
-
-
-
-  /* how-it-works */
-
-
+.roi_guarantee h3{
+  color: #FFF;
+}
+.white {color: #FFF;}
 
 
 
