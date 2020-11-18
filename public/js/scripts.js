@@ -3,7 +3,7 @@ $(document).ready(function() {
     /* PRELOADER *********************************************************************/
     setTimeout(function(){
       $('body').addClass('loaded');
-    }, 500);
+    }, 100);
 	
 
  
@@ -113,3 +113,13 @@ $(`.nav-link[href="${location.pathname}"]`).parent().addClass("active");
 // Lozad -lazy load
 const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();
+
+// Password protected files
+function passwd(){
+  var password = prompt('Enter the password to download the file:');
+  if(password.toLowerCase() == "professor"){
+    window.open("/resource/answer_to_questions.docx")    
+  }else{
+    alert("Incorrect Password!! Please ask Shihab for the correct password.");
+  }
+}

@@ -20,7 +20,7 @@ h3{
 @media (min-width: 768px) { h3{font-size: 2rem;} }
 
 p{font-size: 1.2rem;}
-
+.text-darkblue{color: #00008b; transition: color 0.8s ease-out;}
 .text-highlight{color: #ff711a;}
 .text-gradient{
   background: -webkit-linear-gradient(#FF2252, #FFA000);
@@ -96,7 +96,7 @@ img {
 
 .header-search-icon {
   position: relative;
-  top: 3px;
+  /* top: 3px; */
 }
 
 .header-chat-icon {
@@ -240,7 +240,7 @@ textarea.tall-textarea {
   display: flex;
   flex-direction: column;
   position: fixed;
-  z-index: 500;
+  z-index: 9999999500;
   top: 0;
   left: 0;
   bottom: 0;
@@ -505,6 +505,10 @@ textarea.tall-textarea {
   background-color: #cce5ff;
   transition: visibility 0s, opacity 0.5s linear;
 }
+#popup-contact-shihab #icon-close{
+  z-index: 9999;
+}
+.spacer {color: transparent; line-height: 2;}
 
 .popup-contact-shihab--method {
   background-color: #fff;
@@ -517,6 +521,9 @@ textarea.tall-textarea {
 /*Portfolio*/
 .portfolio .card {
   margin-bottom: 1.5rem;
+}
+.portfolio .card .card-body .card-title{
+  min-height: 51px;
 }
 
 /* Header/menu/navigation/pages-link */
@@ -691,17 +698,26 @@ padding:0px
 /*
  * Contact page
  */
-.contact_page {
+.page_banner {
   background-color: #2f464c;
 }
-.contact_page h1 {
+.page_banner h1 {
   color: #fff;
 }
-.contact_page .lead {
+.page_banner .lead {
   color: #c0d322;
 }
-.contact_page .display-4 {
+.page_banner .display-4 {
   color: #fff;
+}
+.funky-border-bottom{
+  border-bottom: 1px solid rgba(0,0,0,.3);
+}
+.funky-border-top{
+  border-top: 1px solid hsla(0,0%,100%,.05);
+}
+.page_heading{
+  
 }
 
 /*
@@ -895,8 +911,6 @@ footer .payment-info img {
   border-image: linear-gradient(45deg, rgb(255, 0, 0) 0%, rgb(255, 165, 0) 100%);
   border-image-slice: 9;
   border-style: solid;
-
-    
 }
 
 /*
@@ -917,6 +931,11 @@ footer .payment-info img {
     min-height: 100px;
   }
 }
+.package .card-footer form button {
+  font-family: 'Volkhov', serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
 
 #carouselExampleIndicators {
   padding: 2rem 1rem;
@@ -929,6 +948,31 @@ footer .payment-info img {
   margin: 0 auto;
   min-height: 120px;
 }
+.testimonial-pricing-page#carouselExampleIndicators footer{
+  background-color: transparent;
+}
+
+/* 
+* Resource page
+*/
+.customer_files{
+  padding: 90px 15px;
+  background-color: #E9EBEC;
+}
+.customer_files .card img{
+  padding: 10% 10% 3%;
+}
+hr.line_gradient_full_width {
+  border: 0;
+  height: 5px;
+  margin: .5rem 0;
+  background-image: linear-gradient(90deg,#ff8a00,#e52e71);
+  border-radius: 5px;
+}
+
+
+
+
 /* SALON */
 #salon {
   background:linear-gradient(0deg, rgba(9,14,35,0.91), rgba(211, 44, 21, .91)), url('/hair-salon-website-design-banner--mobile-min.jpg');
@@ -1131,7 +1175,45 @@ transition: all .3s ease 0s;
 }
 .white {color: #FFF;}
 
-
+.testimonial_home {
+  background-color: rgb(180, 180, 180);
+  padding: 90px 15px;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.testimonial_home .testimonial_heading {
+  background-color: hsla(0, 0%, 100%, 0.5);
+  padding: 1rem;
+}
+@media (min-width: 1100px) {
+  .testimonial_home .testimonial_heading{
+    background-color: transparent;
+    padding: 0;
+  }
+}
+.testimonial_home #carouselExampleIndicators{
+  background-color: hsl(210, 16%, 93%, 0.7);
+  padding: 2rem 3rem;
+  background-image: url(icons/quotation-mark-yellow.svg);
+  background-position: 20px 70px;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  min-height: 500px;
+}
+@media (min-width: 768px) {
+  .testimonial_home #carouselExampleIndicators{
+    min-height: 280px;
+  }
+}
+.testimonial_home .carousel-indicators li{
+  background-color: #FF2252;
+  color:#f0f006
+}
+.text-transparent {color: transparent;}
+.testimonial_home .ratings{
+  color: #ff4500;
+}
 
 
 
