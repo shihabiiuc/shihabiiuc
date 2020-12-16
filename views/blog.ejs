@@ -1,0 +1,106 @@
+<%- include('includes/header') %>
+<link rel="stylesheet" href="/blog.css">
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+      <h1 class="display-4">Blog&sol;Post Archive</h1>
+      <p class="lead">
+        We discus about website design, development, programming, search engine optimization, social media marketing and other business related problem &amp; solution.
+      </p>
+      <hr>
+  </div>
+</div>
+
+<section class="blog-content">
+  <div class="container">
+      
+    <div class="row">
+        <!-- THE BLOG POSTS -->
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-7 col-12">
+          <div class="row">
+              <div class="col">
+                  <h3>Welcome to The Blog</h3>
+                  <p class="section-description">Run by a group of technology experts.</p>
+              </div><!-- /.col-->
+          </div><!-- /.row-->
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="blog-post">
+                    <div class="post-img">
+                        <img src="../images/blog/what-is-jsx-in-react.jpg" alt="blog image">
+                    </div><!-- /.post-img-->
+
+                    <div class="post-content">
+                        <div class="tag-date">Author: <a href="/profile/shihab">Shihab</a> Last Updated: April 04, 2020</div>
+                        <div class="post-type"><i class="fas fa-code"></i></div>
+                        <h5><a href="/post/5ea729f51a8c880004a19502">What is JSX in React?</a></h5>
+                        <p>JSX stands for JavaScript XML. Previously we have written JavaScript into HTML file within script block. But we can do the opposite using JSX, meaning now we can write HTML into JavaScript file. It enhances React's createElement function. Since JSX syntax is closer to HTML, so React DOM uses camelCase naming convesion for HTML Attributes, for example className instead of class.</p>
+                        <a href="/post/5ea729f51a8c880004a19502" class="readmore">Read More <i class="fas fa-angle-double-right"></i></a>
+                    </div><!-- /.post-content-->
+                </div><!-- /.blog-post-->
+            </div><!-- /.col-->
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="blog-post">
+                    <div class="post-img">
+                        <img src="../images/blog/rate-experience-after-autocompletion.jpg" alt="Man using laptop">
+                    </div><!-- /.post-img-->
+
+                    <div class="post-content">
+                        <div class="tag-date">Author: <a href="https://fiverreducation.com/" target="_blank">Fiverr Education</a> Posted: March 27, 2020</div>
+                        <div class="post-type"><i class="fas fa-file-alt"></i></div>
+                        <h5><a href="/rate-experience-after-orders-are-automatically-completed-on-fiverr">Leave Feedback to Automatically Completed Order on Fiverr.</a></h5>
+                        <p>Assuming you&apos;re a client and your order has been completed automaticaly while you were busy. And now you want to leave a feedback/rating to the seller. Note that you&apos;re allowed to do it within 10 days of order completion. Okey, let&apos;s follow few steps.</p>
+                        <a href="/rate-experience-after-orders-are-automatically-completed-on-fiverr" class="readmore">Read More <i class="fas fa-angle-double-right"></i></a>
+                    </div><!-- /.post-content-->
+                </div><!-- /.blog-post-->
+              </div><!-- /.col-->
+
+
+          </div><!--/.row-->
+
+                          
+
+          <!-- THE PAGINATION -->
+
+
+          
+      </div><!-- /.col-8 -->
+
+      <!-- THE SIDEBAR -->
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-12">
+        <!-- TAGS -->
+        <div class="sidebar">
+          <h4 class="sidebar-title"><span>Categories</span></h4>                        
+          <div class="tags-cloud">
+              <p class="tag-cloud-link">JavaScript</p>
+              <p class="tag-cloud-link">React JS</p>
+              <p class="tag-cloud-link">Marketplace</p>
+          </div>                        
+        </div><!-- /.sidebar-->
+        <!-- ABOUT US-->
+        <div class="sidebar">
+            <h4><span>About Us</span></h4>
+            <p>We are a web development agency, and we cover design, development, search engines optimization &amp; content writing. Shihab was one man show at the early 2016. By the time difference we reached to 13. And hopefully we will grow more bigger in the fist quarter of 2021.</p>
+        </div><!-- /.sidebar-->
+        <!-- FEATURED YOUTUBER -->
+        <div class="sidebar">
+            <h4><span>Featured Youtuber</span></h4>
+            <div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/w2rNliLzcc8" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+        </div><!-- /.sidebar-->
+        <!-- BLUEHOST -->
+        <div class="sidebar">
+            <h4><span>Find Your Domain</span></h4>
+            <iframe class="domain-widget-shihabiiuc" src="//www.bluehost.com/web-hosting/domaincheckapi/?affiliate=shihabiiuc" width="100%" height="175"></iframe>
+        </div><!-- /.sidebar-->
+
+
+          
+      </div><!-- /.col-4 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.blog-content-->
+
+
+
+<%- include('includes/footer') %>

@@ -237,6 +237,14 @@ exports.fiverr_feedback = function (req, res) {
     }
     res.render('fiverr-feedback', { metatags: res.locals.metaTags })
 }
+exports.blog = function (req, res) {
+    res.locals.metaTags = {
+        title: "Blog about Web Design, Development, SEO, Marketing and Business",
+        description: "We discus about website design, development, search engine optimization, social media marketing and other business related topics.",
+        keywords: "web development blog"
+    }
+    res.render('blog', { metatags: res.locals.metaTags })
+}
 
 exports.ifUserExists = function (req, res, next) {
     User.findByUsername(req.params.username).then(function (userDocument) {

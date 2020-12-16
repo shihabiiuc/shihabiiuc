@@ -1540,3 +1540,20 @@ transition: all .3s ease 0s;
 }
 
 /* GRADIENT BUTTON ENDS*/
+
+/* BROWSER SCROLLBAR */
+html::-webkit-scrollbar {
+  width: 30px;
+  height: 30px;
+}
+html::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear,left top, left bottom,from(#ff8a00),to(#e52e71));
+  background: linear-gradient(180deg,#ff8a00,#e52e71);
+  border-radius: 30px;
+  -webkit-box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+          box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+html::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #F1F1F1, #F1F1F1 1px,#F1F1F1 0,#F1F1F1);
+}
+/* BROWSER SCROLLBAR ENDS */
