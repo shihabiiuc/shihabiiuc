@@ -1,9 +1,9 @@
 $(document).ready(function() {
   
     /* PRELOADER *********************************************************************/
-    setTimeout(function(){
-      $('body').addClass('loaded');
-    }, 100);
+    // setTimeout(function(){
+    //   $('body').addClass('loaded');
+    // }, 100);
 	
 
  
