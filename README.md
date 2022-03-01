@@ -1,5 +1,5 @@
 # Web Developer with SEO & Content Writing Team
-My Fiverr portfolio website built with Node JS, Express, MongoDB and few other NPM packages.
+My portfolio website.
 
 ## Who I Am Anyway
 I'm web developer and I lead a team which involves SEO gurus & content writers. You can think of me as your **one stop shop** for _Web Design & Development._
