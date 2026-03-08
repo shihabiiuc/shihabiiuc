@@ -1,14 +1,84 @@
-# Web Developer with SEO & Content Writing Team
-My portfolio website.
+# Freelance Web Developer focused on High-Performance Websites
 
-## Who I Am Anyway
-I'm web developer and I lead a team which involves SEO gurus & content writers. You can think of me as your **one stop shop** for _Web Design & Development._
+> Building fast, reliable websites for businesses worldwide since 2016.
 
-## Why You Should Hire Me
-> There are over 1.5 billion websites around the web but most of them actually failed. 94.3% of new websites get zero traffic. It's because they just don't have the key pieces of information inline before they get started. You can call me 'Shihab' and I'm going to give you those pieces of information and help you to create a Successful Website. Your website is the core of your online marketing activities but a bad website will cause you to waste money on other marketing methods. I'll ensure your _Return of Invstment_ in the Web Design & Development project. **Start a small Investment today!**
+I’m Shihab, a **freelance web developer** who helps businesses build websites that are **fast, modern,** and built on a **strong technical foundation.**
 
-## Payment Process & Escrow (How it works)
-**What if you made the payment for the web development & you got nothing?** That is why **_Escrow_** come into play. Once we (you & me) agree with the price, you have to make the payment via a 3rd party platform who has _Escrow Service._ They will hold your fund & only release the fund to me once you approve my work. There are lots of platforms who have this _Escrow Service_. I will share more detail when needed.
+Many websites look fine on the surface but are **slow**, **poorly structured**, and **invisible in search results**. When the technical foundation is wrong, businesses end up wasting money on marketing, ads, and SEO.
 
-## Contact Me to Design & Develop Your Website
-[Shihabiiuc.Com](https://www.shihabiiuc.com/)
+My focus is building websites the right way from the start — fast, technically sound, and designed to support long-term growth.
+
+I work closely with clients, communicate clearly, and keep the development process simple and transparent.
+
+## Performance Standards I Aim For
+
+![Expected website performance I aim for](./public//expected-performance.png "Expected Standards I Aim For")
+
+_These metrics are not just technical achievements — they translate directly into better SEO performance, better user experience, and stronger conversion rates._
+
+## Industries I've Worked With
+
+Over the years I’ve built websites for a wide range of businesses and professionals, including:
+
+Construction companies,
+Real estate businesses,
+Family therapists and counsellors,
+Marketing and lead generation agencies,
+Apparel sourcing companies,
+Interior designers,
+Non-profit organizations,
+Language learning institutes and overseas recruitment agencies,
+Travel companies,
+Aesthetic and beauty clinics,
+Roofing companies,
+Property management companies,
+Authors and writers,
+Media agencies,
+Leadership consultants and keynote speakers, and
+Life coaches and trainers.
+
+Each project is different, but the goal is always the same: build a website that represents the client well and performs reliably.
+
+# Let's Work Together
+
+If you're looking for someone to build a fast, technically solid website for your business, feel free to reach out.
+
+[![Fiverr button](./public//fiverr-button.png)](https://www.fiverr.com/s/jjmkXN7)
+
+[![Upwork button](./public//upwork-button.png)](https://www.upwork.com/freelancers/~01a9f777bf29c61bb1?mp_source=share)
+
+[![WhatsApp button](./public//whatsapp-button.png)](https://wa.me/8801947888197)
+
+## Technology Stack
+
+### Frontend & Modern Web
+
+<img src="./public/typescript.svg" alt="TypeScript" style="height:36px; width:auto; margin-right: 20px"/><img src="./public/react.png" alt="React JS" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/astro.svg" alt="Astro" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/motion.png" alt="Motion" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/vite.svg" alt="Vite" style="height:36px; width:auto;"/>
+
+### Backend & Application Development
+
+<img src="./public/nodejs.png" alt="Node.js" style="height:36px; width:auto;margin-right: 20px"/>
+<img src="./public/express.svg" alt="Express" style="height:36px; width:auto;margin-right: 20px"/>
+<img src="./public/laravel.png" alt="Laravel" style="height:36px; width:auto;margin-right: 20px"/>
+<img src="./public/rubyonrails.png" alt="Ruby on Rails" style="height:36px; width:auto;margin-right: 20px"/>
+<img src="./public/php.png" alt="PHP" style="height:36px; width:auto;"/>
+
+### Styling & UI
+
+<img src="./public/tailwind.svg" alt="Tailwind CSS" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/bootstrap.png" alt="Bootstrap" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/sass.png" alt="Sass" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/postcss.png" alt="PostCSS" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/bem.jpg" alt="BEM Methodology" style="height:36px; width:auto;"/>
+
+### CMS & Platforms
+
+<img src="./public/wordpress.png" alt="WordPress" style="height:36px; width:auto;"/>
+
+### Databases
+
+<img src="./public/mysql.png" alt="MySQL" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/mongodb.png" alt="MongoDB" style="height:36px; width:auto;"/>
+
+### Infrastructure & Development Tools
+
+<img src="./public/git.png" alt="Git" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/cloudflare.svg" alt="Cloudflare" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/gulp.svg" alt="Gulp" style="height:36px; width:auto;"/>
+
+## Visit My Website
+
+[Shihabiiuc.Com](https://shihabiiuc.com/)
