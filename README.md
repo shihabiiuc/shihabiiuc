@@ -53,19 +53,15 @@ If you're looking for someone to build a fast, technically solid website for you
 
 ### Frontend & Modern Web
 
-<img src="./public/typescript.svg" alt="TypeScript" style="height:36px; width:auto; margin-right: 20px"/><img src="./public/react.png" alt="React JS" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/astro.svg" alt="Astro" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/motion.png" alt="Motion" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/vite.svg" alt="Vite" style="height:36px; width:auto;"/>
+![Frontend & Modern web technologies](./public/frontend.png)
 
 ### Backend & Application Development
 
-<img src="./public/nodejs.png" alt="Node.js" style="height:36px; width:auto;margin-right: 20px"/>
-<img src="./public/express.svg" alt="Express" style="height:36px; width:auto;margin-right: 20px"/>
-<img src="./public/laravel.png" alt="Laravel" style="height:36px; width:auto;margin-right: 20px"/>
-<img src="./public/rubyonrails.png" alt="Ruby on Rails" style="height:36px; width:auto;margin-right: 20px"/>
-<img src="./public/php.png" alt="PHP" style="height:36px; width:auto;"/>
+![Backend technologies](./public/backend.png)
 
 ### Styling & UI
 
-<img src="./public/tailwind.svg" alt="Tailwind CSS" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/bootstrap.png" alt="Bootstrap" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/sass.png" alt="Sass" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/postcss.png" alt="PostCSS" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/bem.jpg" alt="BEM Methodology" style="height:36px; width:auto;"/>
+![UI and styling tech](./public/ui.png)
 
 ### CMS & Platforms
 
@@ -77,7 +73,7 @@ If you're looking for someone to build a fast, technically solid website for you
 
 ### Infrastructure & Development Tools
 
-<img src="./public/git.png" alt="Git" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/cloudflare.svg" alt="Cloudflare" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/gulp.svg" alt="Gulp" style="height:36px; width:auto;"/>
+![Dev tools](./public/devtool.png)
 
 ## Visit My Website
 
