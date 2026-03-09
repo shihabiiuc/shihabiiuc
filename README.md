@@ -55,21 +55,31 @@ If you're looking for someone to build a fast, technically solid website for you
 
 ![Frontend & Modern web technologies](./public/frontend.png)
 
+---
+
 ### Backend & Application Development
 
 ![Backend technologies](./public/backend.png)
+
+---
 
 ### Styling & UI
 
 ![UI and styling tech](./public/ui.png)
 
+---
+
 ### CMS & Platforms
 
 <img src="./public/wordpress.png" alt="WordPress" style="height:36px; width:auto;"/>
 
+---
+
 ### Databases
 
 <img src="./public/mysql.png" alt="MySQL" style="height:36px; width:auto;margin-right: 20px"/><img src="./public/mongodb.png" alt="MongoDB" style="height:36px; width:auto;"/>
+
+---
 
 ### Infrastructure & Development Tools
 
