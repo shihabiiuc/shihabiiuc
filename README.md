@@ -43,12 +43,6 @@ Each project is different, but the goal is always the same: build a website that
 
 If you're looking for someone to build a fast, technically solid website for your business, feel free to reach out.
 
-[![Fiverr button](./public//fiverr-button.png)](https://www.fiverr.com/s/jjmkXN7)
-
-[![Upwork button](./public//upwork-button.png)](https://www.upwork.com/freelancers/~01a9f777bf29c61bb1?mp_source=share)
-
-[![WhatsApp button](./public//whatsapp-button.png)](https://wa.me/8801947888197)
-
 ## Technology Stack
 
 ### Frontend & Modern Web
